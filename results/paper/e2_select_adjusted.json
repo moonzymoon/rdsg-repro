@@ -1,0 +1,26 @@
+{
+ "metr_la": {
+  "strongest": "Anomaly-Trans",
+  "mean_gap": 0.2683333333333333,
+  "raw_min_p": 0.0009765625,
+  "wy_minP": 0.0009765625,
+  "m": 11,
+  "n": 10
+ },
+ "pems_bay": {
+  "strongest": "LOF-agg",
+  "mean_gap": 0.08643650793650791,
+  "raw_min_p": 0.0009765625,
+  "wy_minP": 0.001953125,
+  "m": 11,
+  "n": 10
+ },
+ "beijing_air": {
+  "strongest": "Partially-corr",
+  "mean_gap": -0.012823232323232325,
+  "raw_min_p": 0.0009765625,
+  "wy_minP": 0.0029296875,
+  "m": 11,
+  "n": 10
+ }
+}

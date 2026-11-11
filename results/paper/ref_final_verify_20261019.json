@@ -1,0 +1,474 @@
+[
+ {
+  "key": "pawlak1982",
+  "doi": "10.1007/BF01001956",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Rough sets",
+   "authors": "Pawlak, Zdzis?aw",
+   "journal": "International Journal of Computer &amp; Informatio",
+   "year": 1982,
+   "vol": "11",
+   "pp": "341-356"
+  }
+ },
+ {
+  "key": "ziarko1993",
+  "doi": "10.1016/0022-0000(93)90048-2",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Variable precision rough set model",
+   "authors": "Ziarko, Wojciech",
+   "journal": "Journal of Computer and System Sciences",
+   "year": 1993,
+   "vol": "46",
+   "pp": "39-59"
+  }
+ },
+ {
+  "key": "dubois1990",
+  "doi": "10.1080/03081079008935107",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "ROUGH FUZZY SETS AND FUZZY ROUGH SETS*",
+   "authors": "DUBOIS, DIDIER; PRADE, HENRI",
+   "journal": "International Journal of General Systems",
+   "year": 1990,
+   "vol": "17",
+   "pp": "191-209"
+  }
+ },
+ {
+  "key": "granger1969",
+  "doi": "10.2307/1912791",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Investigating Causal Relations by Econometric Models and Cross-spectral Methods",
+   "authors": "Granger, C. W. J.",
+   "journal": "Econometrica",
+   "year": 1969,
+   "vol": "37",
+   "pp": "424"
+  }
+ },
+ {
+  "key": "benjamini1995",
+  "doi": "10.1111/j.2517-6161.1995.tb02031.x",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multi",
+   "authors": "Benjamini, Yoav; Hochberg, Yosef",
+   "journal": "Journal of the Royal Statistical Society Series B:",
+   "year": 1995,
+   "vol": "57",
+   "pp": "289-300"
+  }
+ },
+ {
+  "key": "kunsch1989",
+  "doi": "10.1214/aos/1176347265",
+  "status": "MISMATCH",
+  "issues": [
+   "AUTHOR: 'K{\\\"u}nsch, Hans R.' vs CR:Kunsch, Hans R."
+  ],
+  "cr": {
+   "title": "The Jackknife and the Bootstrap for General Stationary Observations",
+   "authors": "Kunsch, Hans R.",
+   "journal": "The Annals of Statistics",
+   "year": 1989,
+   "vol": "17",
+   "pp": "1217-1241"
+  }
+ },
+ {
+  "key": "liu2008isolation",
+  "doi": "10.1109/ICDM.2008.17",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Isolation Forest",
+   "authors": "Liu, Fei Tony; Ting, Kai Ming; Zhou, Zhi-Hua",
+   "journal": "2008 Eighth IEEE International Conference on Data ",
+   "year": 2008,
+   "vol": "",
+   "pp": "413-422"
+  }
+ },
+ {
+  "key": "breunig2000lof",
+  "doi": "10.1145/342009.335388",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "LOF",
+   "authors": "Breunig, Markus M.; Kriegel, Hans-Peter; Ng, Raymond T.",
+   "journal": "Proceedings of the 2000 ACM SIGMOD international c",
+   "year": 2000,
+   "vol": "",
+   "pp": "93-104"
+  }
+ },
+ {
+  "key": "kraskov2004",
+  "doi": "10.1103/PhysRevE.69.066138",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Estimating mutual information",
+   "authors": "Kraskov, Alexander; Stögbauer, Harald; Grassberger, Peter",
+   "journal": "Physical Review E",
+   "year": 2004,
+   "vol": "69",
+   "pp": ""
+  }
+ },
+ {
+  "key": "deng2021gdn",
+  "doi": "10.1609/aaai.v35i5.16523",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Graph Neural Network-Based Anomaly Detection in Multivariate Time Series",
+   "authors": "Deng, Ailin; Hooi, Bryan",
+   "journal": "Proceedings of the AAAI Conference on Artificial I",
+   "year": 2021,
+   "vol": "35",
+   "pp": "4027-4035"
+  }
+ },
+ {
+  "key": "li2018dcrnn",
+  "doi": "",
+  "status": "NO_DOI",
+  "note": "Type: inproceedings, Title: Diffusion convolutional recurrent neural"
+ },
+ {
+  "key": "liang2015beijing",
+  "doi": "10.1098/rspa.2015.0257",
+  "status": "MISMATCH",
+  "issues": [
+   "TITLE: 'Assessing {B}eijing's {PM}$_{2.5}$ pollu' vs CR:'Assessing Beijing's PM\n                 '"
+  ],
+  "cr": {
+   "title": "Assessing Beijing's PM\n                    <sub>2.5</sub>\n                    po",
+   "authors": "Liang, Xuan; Zou, Tao; Guo, Bin",
+   "journal": "Proceedings of the Royal Society A: Mathematical, ",
+   "year": 2015,
+   "vol": "471",
+   "pp": "20150257"
+  }
+ },
+ {
+  "key": "uciBeijingAir",
+  "doi": "",
+  "status": "NO_DOI",
+  "note": "Type: misc, Title: Beijing Multi-Site Air-Quality Data"
+ },
+ {
+  "key": "morris2015gas",
+  "doi": "",
+  "status": "NO_DOI",
+  "note": "Type: techreport, Title: Industrial control system simulation and"
+ },
+ {
+  "key": "xuan2007changing",
+  "doi": "10.1145/1273496.1273629",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Modeling changing dependency structure in multivariate time series",
+   "authors": "Xuan, Xiang; Murphy, Kevin",
+   "journal": "Proceedings of the 24th international conference o",
+   "year": 2007,
+   "vol": "",
+   "pp": "1055-1062"
+  }
+ },
+ {
+  "key": "scirep2026dynamic",
+  "doi": "10.1038/s41598-026-62429-y",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Dynamic rough set learning for reliable early warning in industrial time-series ",
+   "authors": "Zakaria, Amr",
+   "journal": "Scientific Reports",
+   "year": 2026,
+   "vol": "16",
+   "pp": ""
+  }
+ },
+ {
+  "key": "eswa2027credibility",
+  "doi": "10.1016/j.eswa.2026.133459",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Rough set-based credibility-adjusted clustering for time series data analysis: A",
+   "authors": "Divan, Fatemeh; Wah, Teh Ying; Lim, Kheng Seang",
+   "journal": "Expert Systems with Applications",
+   "year": 2027,
+   "vol": "332",
+   "pp": "133459"
+  }
+ },
+ {
+  "key": "asoc2024consistency",
+  "doi": "10.1016/j.asoc.2024.112070",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Consistency-guided semi-supervised outlier detection in heterogeneous data using",
+   "authors": "Chen, Baiyang; Yuan, Zhong; Peng, Dezhong",
+   "journal": "Applied Soft Computing",
+   "year": 2024,
+   "vol": "165",
+   "pp": "112070"
+  }
+ },
+ {
+  "key": "ins2027granularsom",
+  "doi": "10.1016/j.ins.2026.123969",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Granular growing self-organizing map for novelty detection and incremental featu",
+   "authors": "Sun, Yuanhao; Zhu, Ping; Qu, Kanglin",
+   "journal": "Information Sciences",
+   "year": 2027,
+   "vol": "758",
+   "pp": "123969"
+  }
+ },
+ {
+  "key": "tsmc2022entropy",
+  "doi": "10.1109/TSMC.2021.3119119",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Multigranulation Relative Entropy-Based Mixed Attribute Outlier Detection in Nei",
+   "authors": "Yuan, Zhong; Chen, Hongmei; Li, Tianrui",
+   "journal": "IEEE Transactions on Systems, Man, and Cybernetics",
+   "year": 2022,
+   "vol": "52",
+   "pp": "5175-5187"
+  }
+ },
+ {
+  "key": "tkde2026granularball",
+  "doi": "10.1109/TKDE.2026.3656418",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Natural Neighbor Fuzzy Approximations With Granular-Ball Representation for Outl",
+   "authors": "Su, Xinyu; Li, Zheng; Peng, Dezhong",
+   "journal": "IEEE Transactions on Knowledge and Data Engineerin",
+   "year": 2026,
+   "vol": "38",
+   "pp": "1857-1870"
+  }
+ },
+ {
+  "key": "ijar2025multiview",
+  "doi": "10.1016/j.ijar.2025.109402",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Multi-view outlier detection based on multi-granularity fusion of fuzzy rough gr",
+   "authors": "Qiu, Siyi; Wang, Yuefei; Wang, Zixu",
+   "journal": "International Journal of Approximate Reasoning",
+   "year": 2025,
+   "vol": "181",
+   "pp": "109402"
+  }
+ },
+ {
+  "key": "hu2008neighborhood",
+  "doi": "10.1016/j.ins.2008.05.024",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Neighborhood rough set based heterogeneous feature subset selection",
+   "authors": "Hu, Qinghua; Yu, Daren; Liu, Jinfu",
+   "journal": "Information Sciences",
+   "year": 2008,
+   "vol": "178",
+   "pp": "3577-3594"
+  }
+ },
+ {
+  "key": "su2019omni",
+  "doi": "10.1145/3292500.3330672",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurre",
+   "authors": "Su, Ya; Zhao, Youjian; Niu, Chenhao",
+   "journal": "Proceedings of the 25th ACM SIGKDD International C",
+   "year": 2019,
+   "vol": "",
+   "pp": "2828-2837"
+  }
+ },
+ {
+  "key": "xu2022anomaly",
+  "doi": "",
+  "status": "NO_DOI",
+  "note": "Type: inproceedings, Title: Anomaly transformer: time series anomaly"
+ },
+ {
+  "key": "tuli2022tranad",
+  "doi": "10.14778/3514061.3514067",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "TranAD",
+   "authors": "Tuli, Shreshth; Casale, Giuliano; Jennings, Nicholas R.",
+   "journal": "Proceedings of the VLDB Endowment",
+   "year": 2022,
+   "vol": "15",
+   "pp": "1201-1214"
+  }
+ },
+ {
+  "key": "killick2012pelt",
+  "doi": "10.1080/01621459.2012.737745",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Optimal Detection of Changepoints With a Linear Computational Cost",
+   "authors": "Killick, R.; Fearnhead, P.; Eckley, I. A.",
+   "journal": "Journal of the American Statistical Association",
+   "year": 2012,
+   "vol": "107",
+   "pp": "1590-1598"
+  }
+ },
+ {
+  "key": "ho2025gtsad",
+  "doi": "10.1109/TPAMI.2025.3566620",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Graph Anomaly Detection in Time Series: A Survey",
+   "authors": "Ho, Thi Kieu Khanh; Karami, Ali; Armanfard, Narges",
+   "journal": "IEEE Transactions on Pattern Analysis and Machine ",
+   "year": 2025,
+   "vol": "47",
+   "pp": "6990-7009"
+  }
+ },
+ {
+  "key": "zheng2024cstgl",
+  "doi": "10.1109/TNNLS.2023.3325667",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Correlation-Aware Spatial–Temporal Graph Learning for Multivariate Time-Series A",
+   "authors": "Zheng, Yu; Koh, Huan Yee; Jin, Ming",
+   "journal": "IEEE Transactions on Neural Networks and Learning ",
+   "year": 2024,
+   "vol": "35",
+   "pp": "11802-11816"
+  }
+ },
+ {
+  "key": "zhao2020mtadgat",
+  "doi": "10.1109/ICDM50108.2020.00093",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Multivariate Time-Series Anomaly Detection via Graph Attention Network",
+   "authors": "Zhao, Hang; Wang, Yujing; Duan, Juanyong",
+   "journal": "2020 IEEE International Conference on Data Mining ",
+   "year": 2020,
+   "vol": "",
+   "pp": "841-850"
+  }
+ },
+ {
+  "key": "runge2019pcmci",
+  "doi": "10.1038/s41467-019-10105-3",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Inferring causation from time series in Earth system sciences",
+   "authors": "Runge, Jakob; Bathiany, Sebastian; Bollt, Erik",
+   "journal": "Nature Communications",
+   "year": 2019,
+   "vol": "10",
+   "pp": ""
+  }
+ },
+ {
+  "key": "truong2020cpss",
+  "doi": "10.1016/j.sigpro.2019.107299",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Selective review of offline change point detection methods",
+   "authors": "Truong, Charles; Oudre, Laurent; Vayatis, Nicolas",
+   "journal": "Signal Processing",
+   "year": 2020,
+   "vol": "167",
+   "pp": "107299"
+  }
+ },
+ {
+  "key": "matteson2014ecp",
+  "doi": "10.1080/01621459.2013.849605",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "A Nonparametric Approach for Multiple Change Point Analysis of Multivariate Data",
+   "authors": "Matteson, David S.; James, Nicholas A.",
+   "journal": "Journal of the American Statistical Association",
+   "year": 2014,
+   "vol": "109",
+   "pp": "334-345"
+  }
+ },
+ {
+  "key": "hassan2005emergent",
+  "doi": "10.1108/03684920510595544",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Emergent rough set data analysis",
+   "authors": "Hassan, Yasser; Tazaki, Eiichiro",
+   "journal": "Kybernetes",
+   "year": 2005,
+   "vol": "34",
+   "pp": "869-887"
+  }
+ },
+ {
+  "key": "qiao2024threeway",
+  "doi": "10.1108/K-11-2023-2331",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "A novel multi-attribute three-way decision model with three-parameter interval g",
+   "authors": "Qiao, Yu; Jian, Lirong; Cai, Hechang",
+   "journal": "Kybernetes",
+   "year": 2024,
+   "vol": "54",
+   "pp": "5939-5969"
+  }
+ },
+ {
+  "key": "chen2025adknrs",
+  "doi": "10.1016/j.ijar.2024.109323",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Anomaly detection based on improved k-nearest neighbor rough sets",
+   "authors": "Chen, Xiwen; Yuan, Zhong; Feng, Shan",
+   "journal": "International Journal of Approximate Reasoning",
+   "year": 2025,
+   "vol": "176",
+   "pp": "109323"
+  }
+ },
+ {
+  "key": "liao2025fusing",
+  "doi": "10.1016/j.ijar.2025.109530",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Fusing fuzzy rough sets and mean shift for anomaly detection",
+   "authors": "Liao, Mengyao; Chen, Zhiyu; Gao, Can",
+   "journal": "International Journal of Approximate Reasoning",
+   "year": 2025,
+   "vol": "187",
+   "pp": "109530"
+  }
+ },
+ {
+  "key": "rachwal2025rsif",
+  "doi": "10.1016/j.ins.2025.122390",
+  "status": "VERIFIED",
+  "cr": {
+   "title": "Rough set-inspired isolation forest",
+   "authors": "Rachwał, Albert; Karczmarek, Paweł; Rachwał, Alicja",
+   "journal": "Information Sciences",
+   "year": 2025,
+   "vol": "718",
+   "pp": "122390"
+  }
+ }
+]

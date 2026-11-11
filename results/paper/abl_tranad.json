@@ -1,0 +1,278 @@
+{
+ "metr_la": {
+  "1": {
+   "recall": 0.16666666666666666,
+   "n_true": 24,
+   "n_pred": 7,
+   "fa_per_day": 0.048,
+   "delay_med": 5.5,
+   "type_acc": 0.0,
+   "pa_f1": 0.1662971175166297
+  },
+  "2": {
+   "recall": 0.18518518518518517,
+   "n_true": 27,
+   "n_pred": 7,
+   "fa_per_day": 0.032,
+   "delay_med": 14.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.19359642591213702
+  },
+  "3": {
+   "recall": 0.125,
+   "n_true": 24,
+   "n_pred": 7,
+   "fa_per_day": 0.064,
+   "delay_med": 18.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.09463722397476342
+  },
+  "4": {
+   "recall": 0.16666666666666666,
+   "n_true": 24,
+   "n_pred": 7,
+   "fa_per_day": 0.048,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.1935483870967742
+  },
+  "5": {
+   "recall": 0.07407407407407407,
+   "n_true": 27,
+   "n_pred": 7,
+   "fa_per_day": 0.08,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.11571841851494696
+  },
+  "6": {
+   "recall": 0.12,
+   "n_true": 25,
+   "n_pred": 7,
+   "fa_per_day": 0.064,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.16429353778751368
+  },
+  "7": {
+   "recall": 0.08,
+   "n_true": 25,
+   "n_pred": 7,
+   "fa_per_day": 0.08,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.03416856492027334
+  },
+  "8": {
+   "recall": 0.16666666666666666,
+   "n_true": 24,
+   "n_pred": 7,
+   "fa_per_day": 0.048,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.20072483969891275
+  },
+  "9": {
+   "recall": 0.08,
+   "n_true": 25,
+   "n_pred": 7,
+   "fa_per_day": 0.08,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.07163323782234957
+  },
+  "10": {
+   "recall": 0.14814814814814814,
+   "n_true": 27,
+   "n_pred": 7,
+   "fa_per_day": 0.048,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.07571933366986372
+  }
+ },
+ "pems_bay": {
+  "1": {
+   "recall": 0.2,
+   "n_true": 25,
+   "n_pred": 7,
+   "fa_per_day": 0.032,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.13638577691183634
+  },
+  "2": {
+   "recall": 0.2222222222222222,
+   "n_true": 27,
+   "n_pred": 7,
+   "fa_per_day": 0.016,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.21502025553131818
+  },
+  "3": {
+   "recall": 0.2,
+   "n_true": 25,
+   "n_pred": 7,
+   "fa_per_day": 0.032,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.15806095057634612
+  },
+  "4": {
+   "recall": 0.25,
+   "n_true": 24,
+   "n_pred": 7,
+   "fa_per_day": 0.016,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.15315890236119972
+  },
+  "5": {
+   "recall": 0.17857142857142858,
+   "n_true": 28,
+   "n_pred": 7,
+   "fa_per_day": 0.032,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.200532664891117
+  },
+  "6": {
+   "recall": 0.18518518518518517,
+   "n_true": 27,
+   "n_pred": 7,
+   "fa_per_day": 0.032,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.1980664937514737
+  },
+  "7": {
+   "recall": 0.25,
+   "n_true": 24,
+   "n_pred": 7,
+   "fa_per_day": 0.016,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.15439528513322817
+  },
+  "8": {
+   "recall": 0.25,
+   "n_true": 24,
+   "n_pred": 7,
+   "fa_per_day": 0.016,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.1722625408724779
+  },
+  "9": {
+   "recall": 0.18518518518518517,
+   "n_true": 27,
+   "n_pred": 7,
+   "fa_per_day": 0.032,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.2217772986292931
+  },
+  "10": {
+   "recall": 0.24,
+   "n_true": 25,
+   "n_pred": 7,
+   "fa_per_day": 0.016,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.20452432599938025
+  }
+ },
+ "beijing_air": {
+  "1": {
+   "recall": 0.16666666666666666,
+   "n_true": 18,
+   "n_pred": 3,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.17133066818960593
+  },
+  "2": {
+   "recall": 0.10526315789473684,
+   "n_true": 19,
+   "n_pred": 3,
+   "fa_per_day": 0.004347826086956522,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.18248380737820336
+  },
+  "3": {
+   "recall": 0.125,
+   "n_true": 24,
+   "n_pred": 3,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.15051311288483465
+  },
+  "4": {
+   "recall": 0.13636363636363635,
+   "n_true": 22,
+   "n_pred": 3,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.22122905027932963
+  },
+  "5": {
+   "recall": 0.14285714285714285,
+   "n_true": 21,
+   "n_pred": 3,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.19705549263873162
+  },
+  "6": {
+   "recall": 0.12,
+   "n_true": 25,
+   "n_pred": 3,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.21127922971114166
+  },
+  "7": {
+   "recall": 0.15,
+   "n_true": 20,
+   "n_pred": 3,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.16589861751152074
+  },
+  "8": {
+   "recall": 0.14285714285714285,
+   "n_true": 21,
+   "n_pred": 3,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.19672131147540986
+  },
+  "9": {
+   "recall": 0.15,
+   "n_true": 20,
+   "n_pred": 3,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.16930022573363432
+  },
+  "10": {
+   "recall": 0.16666666666666666,
+   "n_true": 18,
+   "n_pred": 3,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.19557625145518043
+  }
+ }
+}

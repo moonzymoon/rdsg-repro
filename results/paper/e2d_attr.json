@@ -1,0 +1,2723 @@
+{
+ "beijing_air": {
+  "seeds": {
+   "1": {
+    "events": [
+     {
+      "idx": 5,
+      "truth": "brk",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 16,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 9,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 1,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 15,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 11,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 14,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 13,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 7,
+      "truth": "emb",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 4.182525057920847,
+     "dgamma": 4.126357688319071,
+     "E:ddelta": 3.672817810298951,
+     "E:dgamma": 4.4264698354493675
+    }
+   },
+   "2": {
+    "events": [
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 9,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "brk",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 8,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 18,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 15,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 11,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 5,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 12,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 7,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 16,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 13,
+      "truth": "brk",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 4.182525057920847,
+     "dgamma": 4.126357688319071,
+     "E:ddelta": 3.672817810298951,
+     "E:dgamma": 4.4264698354493675
+    }
+   },
+   "3": {
+    "events": [
+     {
+      "idx": 2,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 16,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 21,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 22,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 4,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 11,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 18,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 23,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 20,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 15,
+      "truth": "brk",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 13,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 7,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 9,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 12,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 5,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 19,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 3,
+      "truth": "emb",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 4.182525057920847,
+     "dgamma": 4.126357688319071,
+     "E:ddelta": 3.672817810298951,
+     "E:dgamma": 4.4264698354493675
+    }
+   },
+   "4": {
+    "events": [
+     {
+      "idx": 11,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 4,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 15,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 18,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 7,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 2,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 0,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 19,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 5,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 17,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 21,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 20,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 9,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 16,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "brk",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 4.182525057920847,
+     "dgamma": 4.126357688319071,
+     "E:ddelta": 3.672817810298951,
+     "E:dgamma": 4.4264698354493675
+    }
+   },
+   "5": {
+    "events": [
+     {
+      "idx": 9,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 11,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 5,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "brk",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 19,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 18,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 15,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 20,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 7,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 16,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 17,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "emb",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 4.182525057920847,
+     "dgamma": 4.126357688319071,
+     "E:ddelta": 3.672817810298951,
+     "E:dgamma": 4.4264698354493675
+    }
+   },
+   "6": {
+    "events": [
+     {
+      "idx": 18,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 21,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 5,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 24,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 23,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 9,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 19,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 22,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 6,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 11,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 7,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 16,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 15,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 20,
+      "truth": "emb2",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 4.182525057920847,
+     "dgamma": 4.126357688319071,
+     "E:ddelta": 3.672817810298951,
+     "E:dgamma": 4.4264698354493675
+    }
+   },
+   "7": {
+    "events": [
+     {
+      "idx": 19,
+      "truth": "emb2",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 18,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 5,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 11,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 10,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 13,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 9,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 14,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 15,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 16,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 7,
+      "truth": "inv",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 4.182525057920847,
+     "dgamma": 4.126357688319071,
+     "E:ddelta": 3.672817810298951,
+     "E:dgamma": 4.4264698354493675
+    }
+   },
+   "8": {
+    "events": [
+     {
+      "idx": 1,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 20,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 11,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 18,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 8,
+      "truth": "brk",
+      "pred": "brk",
+      "ok": true
+     },
+     {
+      "idx": 7,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 15,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 16,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 4,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 19,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 5,
+      "truth": "emb",
+      "pred": "brk",
+      "ok": false
+     },
+     {
+      "idx": 9,
+      "truth": "inv",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 4.182525057920847,
+     "dgamma": 4.126357688319071,
+     "E:ddelta": 3.672817810298951,
+     "E:dgamma": 4.4264698354493675
+    }
+   },
+   "9": {
+    "events": [
+     {
+      "idx": 11,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 17,
+      "truth": "emb2",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 10,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 18,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 5,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 9,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 16,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 19,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 8,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 15,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 4,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 7,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 2,
+      "truth": "inv",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 4.182525057920847,
+     "dgamma": 4.126357688319071,
+     "E:ddelta": 3.672817810298951,
+     "E:dgamma": 4.4264698354493675
+    }
+   },
+   "10": {
+    "events": [
+     {
+      "idx": 10,
+      "truth": "brk",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 11,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 16,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 13,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 7,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 9,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 5,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 15,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "brk",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 4.182525057920847,
+     "dgamma": 4.126357688319071,
+     "E:ddelta": 3.672817810298951,
+     "E:dgamma": 4.4264698354493675
+    }
+   }
+  },
+  "type_acc_component": 0.362,
+  "by_truth": {
+   "brk": {
+    "acc": 0.077,
+    "n": 13
+   },
+   "inv": {
+    "acc": 0.429,
+    "n": 21
+   },
+   "emb": {
+    "acc": 0.455,
+    "n": 22
+   },
+   "emb2": {
+    "acc": 0.5,
+    "n": 2
+   }
+  }
+ },
+ "metr_la": {
+  "seeds": {
+   "1": {
+    "events": [
+     {
+      "idx": 5,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 0,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 11,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 20,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 22,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 16,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 2,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 12,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 23,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 9,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 13,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 18,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 14,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 19,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 15,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 3,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 21,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 7,
+      "truth": "emb",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 3.9817178172254244,
+     "dgamma": 4.531517173795072,
+     "E:ddelta": 4.083482709341063,
+     "E:dgamma": 4.564439463966035
+    }
+   },
+   "2": {
+    "events": [
+     {
+      "idx": 20,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 21,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 9,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 15,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 18,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 25,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 22,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 10,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 11,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 5,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 12,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 23,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 19,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 7,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 14,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 24,
+      "truth": "emb2",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 0,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 26,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 16,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     }
+    ],
+    "thetas": {
+     "ddelta": 3.9817178172254244,
+     "dgamma": 4.531517173795072,
+     "E:ddelta": 4.083482709341063,
+     "E:dgamma": 4.564439463966035
+    }
+   },
+   "3": {
+    "events": [
+     {
+      "idx": 2,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 5,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 11,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 4,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 8,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 7,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 22,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 21,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 15,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 9,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 20,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 23,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 19,
+      "truth": "brk",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 16,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 18,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 12,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "emb",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 3.9817178172254244,
+     "dgamma": 4.531517173795072,
+     "E:ddelta": 4.083482709341063,
+     "E:dgamma": 4.564439463966035
+    }
+   },
+   "4": {
+    "events": [
+     {
+      "idx": 23,
+      "truth": "emb2",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 12,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 4,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 11,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 7,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 0,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 5,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 21,
+      "truth": "emb2",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 9,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 18,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 22,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 19,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 15,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 10,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 20,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 16,
+      "truth": "emb",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 3.9817178172254244,
+     "dgamma": 4.531517173795072,
+     "E:ddelta": 4.083482709341063,
+     "E:dgamma": 4.564439463966035
+    }
+   },
+   "5": {
+    "events": [
+     {
+      "idx": 12,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 15,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 20,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 9,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 22,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 21,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 26,
+      "truth": "emb2",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 13,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 5,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 23,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 25,
+      "truth": "emb2",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 11,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 19,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 18,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 7,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 17,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 16,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 24,
+      "truth": "inv",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 3.9817178172254244,
+     "dgamma": 4.531517173795072,
+     "E:ddelta": 4.083482709341063,
+     "E:dgamma": 4.564439463966035
+    }
+   },
+   "6": {
+    "events": [
+     {
+      "idx": 18,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 20,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 5,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 21,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 13,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 11,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 16,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 22,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 9,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 24,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 7,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 15,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 19,
+      "truth": "brk",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 23,
+      "truth": "emb2",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 3.9817178172254244,
+     "dgamma": 4.531517173795072,
+     "E:ddelta": 4.083482709341063,
+     "E:dgamma": 4.564439463966035
+    }
+   },
+   "7": {
+    "events": [
+     {
+      "idx": 11,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 5,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 17,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 24,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 18,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 15,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 20,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 22,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 2,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 9,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 19,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 14,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 16,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 23,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 8,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 21,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 7,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     }
+    ],
+    "thetas": {
+     "ddelta": 3.9817178172254244,
+     "dgamma": 4.531517173795072,
+     "E:ddelta": 4.083482709341063,
+     "E:dgamma": 4.564439463966035
+    }
+   },
+   "8": {
+    "events": [
+     {
+      "idx": 1,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 11,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 19,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 20,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 8,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 7,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 22,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 2,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 17,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 18,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 21,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 23,
+      "truth": "emb2",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 4,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 14,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 10,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 15,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 5,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 16,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 9,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     }
+    ],
+    "thetas": {
+     "ddelta": 3.9817178172254244,
+     "dgamma": 4.531517173795072,
+     "E:ddelta": 4.083482709341063,
+     "E:dgamma": 4.564439463966035
+    }
+   },
+   "9": {
+    "events": [
+     {
+      "idx": 14,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 19,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 9,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 6,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 24,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 15,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 5,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 1,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 23,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 12,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 3,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 16,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 8,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 20,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 18,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 2,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 11,
+      "truth": "brk",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 4,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 22,
+      "truth": "inv",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 7,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 21,
+      "truth": "emb",
+      "pred": null
+     }
+    ],
+    "thetas": {
+     "ddelta": 3.9817178172254244,
+     "dgamma": 4.531517173795072,
+     "E:ddelta": 4.083482709341063,
+     "E:dgamma": 4.564439463966035
+    }
+   },
+   "10": {
+    "events": [
+     {
+      "idx": 14,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 15,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 21,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 0,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 11,
+      "truth": "emb",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 8,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 26,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 10,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 3,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 20,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 4,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 17,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 16,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 25,
+      "truth": "emb2",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 6,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 13,
+      "truth": "emb",
+      "pred": null
+     },
+     {
+      "idx": 23,
+      "truth": "brk",
+      "pred": "inv",
+      "ok": false
+     },
+     {
+      "idx": 12,
+      "truth": "brk",
+      "pred": null
+     },
+     {
+      "idx": 7,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 9,
+      "truth": "inv",
+      "pred": null
+     },
+     {
+      "idx": 18,
+      "truth": "brk",
+      "pred": "emb",
+      "ok": false
+     },
+     {
+      "idx": 24,
+      "truth": "emb2",
+      "pred": null
+     },
+     {
+      "idx": 5,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 1,
+      "truth": "inv",
+      "pred": "inv",
+      "ok": true
+     },
+     {
+      "idx": 19,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 22,
+      "truth": "emb",
+      "pred": "emb",
+      "ok": true
+     },
+     {
+      "idx": 2,
+      "truth": "brk",
+      "pred": "emb",
+      "ok": false
+     }
+    ],
+    "thetas": {
+     "ddelta": 3.9817178172254244,
+     "dgamma": 4.531517173795072,
+     "E:ddelta": 4.083482709341063,
+     "E:dgamma": 4.564439463966035
+    }
+   }
+  },
+  "type_acc_component": 0.487,
+  "by_truth": {
+   "brk": {
+    "acc": 0.0,
+    "n": 21
+   },
+   "emb": {
+    "acc": 0.406,
+    "n": 32
+   },
+   "inv": {
+    "acc": 0.754,
+    "n": 57
+   },
+   "emb2": {
+    "acc": 0.143,
+    "n": 7
+   }
+  }
+ }
+}

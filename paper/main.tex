@@ -1,0 +1,1470 @@
+% !TEX program = pdflatex
+% Structural rupture of rough dependency graphs: relational anomaly detection
+% in multivariate time series. Target journal: Cybernetics and Systems
+% (Taylor & Francis, double-anonymous). Anonymised main document; author
+% details are in the separate title page file.
+% Compile: pdflatex main; bibtex main; pdflatex x2.
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.95cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[round]{natbib}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{*2.0}{*1.0}
+\titlespacing*{\subsection}{0pt}{*1.6}{*0.8}
+\renewcommand{\bibfont}{\fontsize{7.0}{8.4}\selectfont}
+\setlength{\bibsep}{0pt}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.85}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{xurl}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,shapes,positioning,calc}
+\usepackage[skip=3pt,font=small]{caption}
+\AtBeginDocument{%
+  \setlength{\abovedisplayskip}{6pt plus 2pt minus 3pt}%
+  \setlength{\belowdisplayskip}{6pt plus 2pt minus 3pt}%
+  \setlength{\abovedisplayshortskip}{4pt plus 2pt minus 2pt}%
+  \setlength{\belowdisplayshortskip}{4pt plus 2pt minus 2pt}}
+\usepackage{figurestyle}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+\newcommand{\gammaq}{\gamma}
+
+\newcommand{\keywords}[1]{\vspace{0.5em}
+\noindent \textbf{Keywords:} #1}
+\newcommand{\RDSG}{RDSG}
+\input{gen/e0_macros.tex}
+\input{gen/e1_macros.tex}
+\input{gen/e2_macros.tex}
+\input{gen/e3_macros.tex}
+\input{gen/e7_macros.tex}
+\input{gen/e2n_macros.tex}
+\input{gen/e2s_macros.tex}
+\input{gen/e1c_macros.tex}
+\input{gen/e2c_macros.tex}
+\input{gen/e2len_macros.tex}
+\input{gen/e5_macros.tex}
+\input{gen/e2d_macros.tex}
+\input{gen/w3w5_macros.tex}
+\IfFileExists{gen/e0b_macros.tex}{\input{gen/e0b_macros.tex}}{}
+
+\title{Structural rupture of rough dependency graphs:\\
+relational anomaly detection in multivariate time series}
+\author{\normalsize\itshape Author details omitted for double-anonymous review}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}{\sloppy
+Per-channel monitors miss failures reshaping inter-channel dependence,
+leaving marginals intact. We introduce the rough dependency structure
+graph (RDSG), monitoring the dependency degree $\gamma$ and direction
+$\delta$ on copula-standardised inter-channel edges at a calibrated
+false-alarm budget.
+On a synthetic gate the family reaches 0.47 recall against the
+$\gamma$-only ablation's 0.36. Point baselines sit at their floors. On WADI, RDSG alone
+registers recall at the budgeted operating point (5/14 attacks). At a
+common requested budget it exceeds the strongest external baseline on two of three
+networks (by exact paired differences $0.27$ and $0.09$), the Gaussian leader
+ahead on the third. Short events
+remain hardest.
+}\end{abstract}
+
+\keywords{rough sets; dependency degree; multivariate time series;
+relational anomaly detection; false-alarm calibration}
+
+\section{Introduction}\label{sec:intro}
+
+Monitoring systems rarely fail by moving one signal at a time. A pump and its
+upstream pressure sensor keep their marginal distributions while their
+coupling inverts; two traffic sensors that never correlated before start
+moving together; a controller loop quietly severs the statistical tie between
+command and response. In all three cases every per-channel alarm, and every
+learned detector whose score is a fixed function of the single-channel value,
+keeps silent, because the evidence lives in the \emph{joint} distribution, not
+in the marginals. We call these failures \emph{relational anomalies} and the
+task of detecting them \emph{relational anomaly detection}.
+
+The rough-set notion of dependency \citep{pawlak1982,ziarko1993} is a natural
+lens for this task: it asks, for a set of condition attributes and a decision
+attribute, how much of the decision is determined by the conditions. Placed on
+a multivariate time series, the question ``does the granular past of channel
+$i$ determine the granular present of channel $j$?'' is exactly a dependency
+question, and its negation over time, where a dependency appears, disappears
+or reverses, is a relational anomaly. Yet the classical dependency degree
+$\gamma$ carries a known blind spot that is fatal here: when $Y=X$ turns into
+$Y=-X$, every granule of $X$ still determines the same granule of $Y$, the
+positive region does not shrink, and $\gamma$ does not move. A detector built
+on $\gamma$ alone is deaf to inversion, one of the most damaging relational
+failures.
+
+This paper builds the detector that the blind spot forbids, in three moves.
+
+\textbf{(i) A four-tuple edge encoding.} Each candidate dependency edge
+$(A\!\to\! d,\tau)$, where $A$ is a channel subset, $d$ a target, and $\tau$ a lag,
+is encoded by the dependency degree, a rule-mapping consistency $\rho$, a granular
+direction coefficient $\delta$ (statistical direction, not causal) and a
+conditional-distribution divergence
+$D_{JS}$. We prove by construction that no single pair-level component covers all
+three canonical relation changes, each of which some other component or
+edge level sees (\S\ref{sec:quad}). $\gamma$ is
+taken in a soft variable-precision form, namely the occupancy-weighted modal rule
+confidence, which is defined for real-valued series and, crucially, is
+\emph{stable under inversion}, so that the remaining components carry exactly
+the information $\gamma$ must miss.
+
+\textbf{(ii) Copula standardisation.} All statistics are computed on
+contingency tables whose margins are first equalised by a smoothed
+iterative-proportional-fitting (SIPF) transform. Without this step the dependency
+degree inherits a target channel's marginal occupancy skew and reports
+dependencies that do not exist (measured artefact $0.39$, floor $0.25$). With it, the independence floor of the fully standardised table is
+$1/K$ (Proposition~\ref{prop:bounds}); the two-iteration implementation
+approximates exact uniformity, and residual marginal leakage is
+quantified in S.8.
+
+\textbf{(iii) A dual-channel candidate graph with honest calibration.} A
+detector that scans every pair $\times$ lag $\times$ statistic pays a family
+tax that buries real signals. The rough dependency structure graph
+(\RDSG{}) instead maintains a compact
+\emph{rupture graph} of reference-significant edges (for breakdown and
+inversion) and a small \emph{emergence pool} of weak pairs (for newly born
+dependencies), defines the graph once at the primary granularity, and
+calibrates per-component alarm thresholds by block permutation
+\citep{kunsch1989} and an empirical self-scan of the reference segment, so
+that the reference-segment false-alarm rate is an input to the procedure. An optional
+rolling-mean variant (library option, unexercised, S.8) exploits the
+persistence of a true rupture across consecutive boundaries.
+
+Each alarm additionally reports which component fired and on which channel,
+giving the operator a component-level attribution (an exploratory type label
+is provided in the repository but is not claimed as a capability; \S\ref{sec:e2}).
+
+The contributions are:
+\begin{enumerate}\itemsep2pt
+\item a granular decision-table construction that turns channel-subset$\times$lag
+dependence into rough-set quantities computable by counting, with
+copula-standardised statistics with an exact independence floor on the
+ideal standardised table;
+\item a four-component edge encoding that describes the relation change
+from complementary perspectives, of which two components form the
+calibrated detection family;
+\item a dual-channel candidate-graph monitor whose alarm thresholds are
+calibrated by reference self-scan under a stated false-alarm budget, with
+block-permuted nulls for edge attribution; and
+\item a margin-preserving injection suite and FA-matched protocol under
+which point, graph-deviation and structural monitors are evaluated on three
+real networks and two labelled ICS logs.
+\end{enumerate}
+
+Proposition~\ref{prop:blind} in §\ref{sec:quad}
+formalises the complementary blind spots. Propositions~\ref{prop:bounds}--\ref{prop:granular} and Lemma~\ref{lemma:margin} establish the bounds,
+crisp-table correspondence, inversion invariance, coarsening monotonicity,
+and the margin-preservation guarantee (proofs of
+Propositions~\ref{prop:bounds}--\ref{prop:granular} and of the lemma, and
+the full constructions behind Proposition~\ref{prop:blind}, are
+given in the Supplemental Material).
+
+We evaluate the method on a margin-preserving injection suite (re-orderings of
+observed values inside a window: marginals are preserved point-wise, so any
+marginal-based detector is provably blind), on three real sensor networks
+(METR-LA, Beijing multi-site air quality, PEMS-BAY) and on the MSU gas
+pipeline with 53 labelled attacks. The headline findings are:
+\begin{itemize}\itemsep2pt
+\item the detection family ($\gamma$ and $\delta$) outperforms its $\gamma$-only ablation at the calibrated operating point
+      (\eZeroRdsRecall{} vs.\ \eZeroGammaRecall{} overall; inversion
+      \eZeroRdsInv{} vs.\ \eZeroGammaInv{}), confirming that the blind-spot
+      fix is load-bearing, not decorative;
+\item with false alarms matched on the reference segment, point detectors
+      (Isolation Forest \citep{liu2008isolation} and LOF \citep{breunig2000lof} aggregations) and a graph deviation network
+      collapse towards their floors on all relational injection types
+      (IF \eZeroIfRecall{}, LOF $0.04$, MI-graph $0.06$), while \RDSG{}
+      retains a recall of \eZeroRdsRecall{} ($p=\eZeroPval$, Wilcoxon);
+\item on the gas pipeline, \RDSG{} traces an operating curve that dominates
+      linear-Gaussian baselines at low false-alarm budgets, the regime that
+      matters operationally. On the three real networks RDSG significantly exceeds the strongest external baseline on two of three
+networks (one-sided Wilcoxon, $p\le 0.007$), METR-LA over every
+external baseline and PEMS-BAY over the LOF aggregation; on air quality
+the strongest baseline is nominally ahead and the $\gamma$-only
+ablation leads both; on WADI real cyber-attacks it is, among methods
+evaluable at that budget, the only one with nonzero recall.
+\item an initial capability gate exposes precisely which statistical choices
+      matter (soft $\gamma$, copula standardisation, family design, component
+      thresholds); we document the diagnostic chain because each step
+      generalises to other granular detectors.
+\end{itemize}
+
+\subsection*{Scope and non-goals}
+\RDSG{} reports data-internal relational anomalies with type attribution. It
+does not trigger controller retraining (complementary work on detector-health
+monitoring owns that decision), does not calibrate delayed labels (owned by
+delay-calibration work), and uses its permutation machinery for detection, not
+for benchmark auditing. These interfaces are stated so the method composes
+with, rather than duplicates, those functions.
+
+\section{Related work}\label{sec:related}
+
+\textbf{Rough sets and outlier/anomaly detection.} Rough-set outlier
+detection reaches back to \citet{pawlak1982}'s approximations and their first
+generalisations \citep{dubois1990}, and has grown
+along several lines: entropy- and neighbourhood-based detectors in
+multidimensional data \citep{hu2008neighborhood,tsmc2022entropy}, granular-ball constructions for
+mixed and high-dimensional data \citep{tkde2026granularball}, multi-view and
+multi-granularity fusions \citep{ijar2025multiview}, and incremental granular
+self-organising models for novelty detection \citep{ins2027granularsom}.
+Semi-supervised and weakly supervised rough detectors
+\citep{asoc2024consistency} address label scarcity. Closest to our evaluation
+question, a recent family of rough-set anomaly detectors scores individual
+samples. Representative members include adaptive-neighbourhood kNN rough sets
+\citep{chen2025adknrs}, fuzzy-rough mean-shift clustering
+\citep{liao2025fusing}, and a rough-set-inspired isolation forest
+\citep{rachwal2025rsif}. A neighbourhood-coverage representative of this
+family serves as a baseline in \S\ref{sec:e2}. Within the systems and
+cybernetics literature, rough-set data analysis was classically established
+by \citet{pawlak1998cs}, and three-way decision models more recently extend
+granular rough sets to multi-attribute decisions
+\citep{qiao2024threeway}; these treat decisions over samples, not the
+evolution of dependence between channels. All of these score
+\emph{samples} against a sample distribution; none models dependence
+\emph{between channels} as the monitored object. The closest rough-set works
+on time series use rough models for early-warning classification
+\citep{scirep2026dynamic} or credibility-adjusted clustering
+\citep{eswa2027credibility}; both remain at the per-series level, and neither
+targets structural change of inter-channel dependence. \RDSG{} differs in its
+monitored object (edges of a dependency graph), its statistics (a
+copula-standardised four-tuple around the dependency degree), and its output
+(typed alarms with per-edge attribution).
+
+\textbf{Dependency-aware detection in multivariate series.} Learning-based
+approaches infer channel graphs and score deviations on them: the graph
+deviation network of \citet{deng2021gdn}, graph-attention detectors
+\citep{zhao2020mtadgat}, and causal-graph detectors built on (conditional)
+independence and transfer-entropy ideas \citep{runge2019pcmci}. These learn a
+graph once
+(or slowly) and treat deviations of values from predictions. The graph itself
+is not the monitored hypothesis, and no statistical guarantee on relational
+alarms is offered. Bayesian change-point models of changing dependency
+structure \citep{xuan2007changing} are the closest classical statement of our
+problem. They assume conjugate parametric families and degrade with
+non-stationary marginals. \citet{granger1969}'s causality testing is the
+classical pairwise tool. We use it as a baseline and share its candidate-pair
+discipline, but replace parametric F-tests by granular statistics that need no
+linearity.
+
+\textbf{Learning-based monitors.} Deep learning approaches form a large
+family: stochastic recurrent models \citep{su2019omni}, association-discrepancy
+transformers \citep{xu2022anomaly}, forecasters \citep{tuli2022tranad}, and
+multi-instance attention scoring \citep{jang2024cs} --- the last closest
+to our setting: learned attention over prediction residuals, versus
+counting on granular tables with no training. The graph-based sub-field (\emph{G-TSAD}) is
+systematically surveyed by \citet{ho2025gtsad}, who classify anomalies
+into five categories (node, edge, sub-graph, graph, inter-observation)
+and note that \emph{edge and sub-graph anomalies in
+constructed graphs}, precisely the relational failures this paper
+targets, remain the least explored category. Methods such as GDN
+\citep{deng2021gdn} and correlation-aware spatial--temporal graph learning
+\citep{zheng2024cstgl} learn a graph as a \emph{representation} for value
+prediction. In contrast,
+\RDSG{} treats the dependency graph as the \emph{monitored object}: edges
+are rough-set dependency degrees computed on granular decision tables,
+alarms are calibrated statistical tests on graph structure, and alarms carry
+type attribution. This distinction, graph-as-representation vs.
+graph-as-hypothesis, is fundamental and, to our knowledge, has no counterpart in the
+G-TSAD literature. Graph structure also serves a third role, downstream of
+detection: grounding anomaly \emph{explanation}, with causal graphs
+enforcing the structural compliance of LLM-generated root-cause narratives
+\citep{zhang2026exsy70467}, constraining interpretation rather than
+raising alarms. Change-point methodology attacks dependency structure
+from the statistical side, both parametrically
+\citep{xuan2007changing,killick2012pelt} and nonparametrically for
+multivariate energy-based partitions \citep{matteson2014ecp}, with offline
+methods systematically surveyed by \citet{truong2020cpss};
+typically one series or a parametrically modelled series at a time.
+The rough-set outlier detection literature
+\citep{tsmc2022entropy,tkde2026granularball,ijar2025multiview,asoc2024consistency}
+scores individual samples rather than inter-channel dependence. \RDSG{} occupies exactly that gap: its monitored objects
+are the survey's \emph{edge} and \emph{sub-graph} anomaly classes, detected
+statistically rather than learned.
+
+\textbf{Statistical machinery.} Our calibration composes block permutations
+\citep{kunsch1989} with an empirical self-scan; multiplicity is controlled by
+per-component families with union-bound budgets rather than a global
+Benjamini--Hochberg sweep \citep{benjamini1995}, which we reserve for
+post-alarm edge attribution. Mutual information
+\citep{kraskov2004}, partial correlation and VAR residual monitors
+\citep{granger1969} are treated as baselines under the same false-alarm
+matching protocol. Our event-level, false-alarm-matched evaluation also
+follows the direction of recent multivariate TSAD benchmarking efforts,
+which have moved away from point-wise scores towards event-level and
+budget-aware protocols.
+
+\subsection*{A cybernetic reading}
+In systems terms, the monitor proposed here occupies the \emph{diagnose}
+stage of the classical loop \emph{observe $\rightarrow$ diagnose $\rightarrow$
+act}: observation is delegated to existing per-channel and learned monitors,
+acting (retraining, failover, maintenance) is delegated to the operator or to
+downstream decision services. The contribution is the middle layer, a
+statistical instrument that turns granular dependence into a falsifiable
+alarm with a type label, together with the calibration discipline that
+makes its alarm rate an input rather than an outcome. The type label
+matters for the act stage: a \emph{breakdown} suggests a severed
+communication or failed coupling, an \emph{inversion} suggests a
+sign-reversed feedback loop (the classic stability hazard), and an
+\emph{emergence} suggests an unauthorised coupling or side-channel.
+Framed this way, the detector composes with, rather than competes
+against, detector-health and retraining services described in the
+industrial monitoring literature. In control-theoretic terms, the
+dependency graph is a structural model of the observed system; a
+rupture alarm signals that the model's structure, not its parameters,
+has changed, which is the regime where gain scheduling and parameter
+adaptation are insufficient and re-identification or failover is
+required. The component-level attribution (which statistic fired, on
+which channel) maps directly to the observability-redundancy analysis
+used in fault diagnosis: a direction flip suggests a sign error or
+sensor reversal, while a degree collapse suggests a communication or
+physical coupling failure.
+
+\section{Preliminaries and problem statement}\label{sec:prelim}
+
+Let $x(t)\in\mathbb{R}^n$, $t=1,\dots,T$, be an $n$-channel series. A
+\emph{reference segment} $W_{\mathrm{ref}}$ is assumed to hold one stationary
+relational regime. A \emph{test segment} is monitored. A \emph{relational
+anomaly} is an interval in the test segment during which there exist a channel
+subset $A$, a target channel $d$ and a lag $\tau$ such that the dependence of
+the granulated $d(t)$ on the granulated $A(t-\tau)$ differs systematically
+from the reference regime, while each channel's marginal distribution is
+approximately unchanged. Three types are distinguished: \emph{breakdown} (a
+reference dependence vanishes), \emph{inversion} (a reference dependence
+persists in strength but flips its rule or direction), and \emph{emergence} (a
+dependence appears; if it exists only jointly in a subset and not in any pair,
+we call it subset-joint emergence).
+
+A \emph{granular decision table} for target $d$ and lag $\tau$ over a window
+$W$ has one object per time $t\in W$, condition attributes
+$a_i(t)=\Phi^K_i(x_i(t-\tau))\in\{0,\dots,K-1\}$ for $i\in A$ (equal-frequency
+granulation $\Phi^K_i$ fitted on the reference segment and frozen) and
+decision attribute $\delta_d(t)=\Phi^K_d(x_d(t))$. The induced contingency
+table $T\in\mathbb{N}^{K^{|A|}\times K}$ counts granule pairs. \emph{All
+statistics below are functions of $T$ only}, which is what makes block
+permutation cheap.
+
+\section{The rough dependency structure graph (RDSG)}\label{sec:method}
+
+\subsection{Overview}\label{sec:overview}
+Given a multivariate series $x(t) \in \mathbb{R}^n$ and a reference
+segment $W_{\mathrm{ref}}$, the pipeline proceeds in five steps.
+First, each channel is granulated into $K$ equal-frequency levels to
+produce grain sequences $G = \Phi^K(x)$.
+Second, candidate dependency edges $(A, d, \tau)$ are selected from the
+reference segment into a dual-channel graph (Table~\ref{tab:symbols}).
+Third, each edge's four-tuple $(\gamma, \rho, \delta, D_{JS})$ is
+computed on copula-standardised contingency tables.
+Fourth, alarm thresholds are calibrated on the reference segment so the
+false-alarm rate is an input.
+Fifth, alarms are merged into events and typed.
+Figure~\ref{fig:pipeline} illustrates the pipeline: panel (a) shows the dual-channel candidate graph, panel (b) the copula-standardised statistics that feed the detection family, and panel (c) the rate-calibrated alarm machinery; the complete procedure is tabulated as Table~\ref{alg:rdsg}.
+
+\begin{figure}[t]\centering\input{fig1_architecture.tex}\caption{The \RDSG{} monitor. (a) The dual-channel candidate graph: strong-pair channel R and weak-pair channel E over granulated series (solid blue and green lines are normal edges, the dashed red line a rupture; the marker legend encodes class by shape and colour, circles normal and squares rupture). (b) Copula-standardised statistics: IPF decouples the four-tuple from marginals; the detection family reads only $\Delta\gamma+\Delta\delta$, with $\rho$ and $D_{JS}$ serving attribution and typing. (c) Rate-calibrated alarm: per-component thresholds from the reference self-scan budget alarm samples per day; crossing boundaries (squares) merge into typed events. Dashed arrows replay frozen artefacts.}
+\label{fig:pipeline}
+\end{figure}
+
+
+\begin{table}[t]\centering\small
+\caption{Notation used throughout this paper.}
+\label{tab:symbols}
+\begin{tabular}{ll}\hline
+Symbol & Meaning \\ \hline
+$n$ & Number of channels \\
+$T$ & Series length \\
+$K$ & Number of granules per channel \\
+$w$ & Detection window length \\
+$b$ & Block length (stride) \\
+$B$ & Number of block permutations \\
+$A$ & Channel subset (condition attributes) \\
+$d$ & Target channel (decision attribute) \\
+$\tau$ & Lag \\
+$\Phi^K_i$ & Granulation function for channel $i$ \\
+$G$ & Granulated series \\
+$T(A{\to}d, \tau)$ & Contingency table for edge $(A, d, \tau)$ \\
+$\pi(T)$ & Copula-standardised table \\
+$\gamma$ & Soft variable-precision dependency degree \\
+$\rho$ & Rule-map consistency \\
+$\delta$ & Granular direction coefficient \\
+$D_{JS}$ & Conditional Jensen--Shannon divergence \\
+$\mu_e, \sigma_e$ & Calibration mean/std for edge $e$ \\
+$\theta_c$ & Alarm threshold for component $c$ \\
+$z_e(b)$ & Standardised statistic at boundary $b$ \\
+$R / E$ & Rupture / Emergence channel \\
+$S_e$ & Rolling-mean evidence for edge $e$ \\ \hline
+\end{tabular}
+\end{table}
+
+Hyperparameters are listed in Table~\ref{tab:params}.
+
+\subsection{Copula-standardised granular statistics}\label{sec:quad}
+
+\paragraph{Standardisation.} Raw table margins carry the channel's occupancy
+skew: we measured a channel whose dependency degree against \emph{every}
+partner sat at $0.39$, a pure marginal artefact against a floor of $0.25$.
+We therefore equalise margins with one pass of additive smoothing
+($\alpha{=}8$ counts, so sparse rows shrink towards uniform instead of
+amplifying sampling noise) followed by two iterations of
+iterative proportional fitting to the uniform margins (the SIPF
+transform). The result $\pi(T)$ is
+a discrete copula estimate: every statistic below is a function of the
+standardised table(s) ($\pi_{\mathrm{c}}$ alone, or the reference--current
+pair $\pi_{\mathrm{r}},\pi_{\mathrm{c}}$ for $\rho$ and $D_{JS}$), so
+that exact fitting of a margin-balanced table attains the $1/K$ floor and
+marginal drift does not move the statistics; on skewed independent tables
+the smoothing pass itself shifts the floor slightly --- a shift stable in
+the iteration count, absorbed by the calibration's empirical null (S.8).
+
+\paragraph{Four components.} For reference and current tables
+$T_{\mathrm{r}},T_{\mathrm{c}}$ with standardised versions
+$\pi_{\mathrm{r}},\pi_{\mathrm{c}}$:
+\begin{align}
+\gamma(\pi) &= \sum_{g}\pi_g\,\max_{v}\pi_{v\mid g}
+  &&\text{(soft variable-precision dependency degree)}\\
+\rho(T_{\mathrm{r}},T_{\mathrm{c}}) &=
+  \sum_{g}\pi^{\mathrm{r}}_g\,\mathbf{1}\!\left[\phi_{\mathrm{r}}(g)=\phi_{\mathrm{c}}(g)\right]
+  &&\text{(modal rule-map consistency)}\\
+\delta(\pi) &= \mathrm{corr}\big(g,\;v;\;\pi\big)
+  &&\text{(granular direction, centred indices)}\\
+D_{JS}(\pi_{\mathrm{r}},\pi_{\mathrm{c}}) &=
+  \sum_{g}\pi^{\mathrm{r}}_g\,\mathrm{JSD}\big(\pi^{\mathrm{r}}_{\cdot\mid g},
+  \pi^{\mathrm{c}}_{\cdot\mid g}\big)
+  &&\text{(conditional residual divergence)}
+\end{align}
+with $\phi(g)=\arg\max_v\pi_{v\mid g}$ the modal decision rule.
+$\gamma\in[1/K,1]$ is the occupancy-weighted confidence of the modal rules.
+It is the soft variable-precision reading of the dependency degree
+\citep{ziarko1993} and is what remains computable on real-valued series where
+hard $\beta$-positive regions are empty. The tuple
+$s(A\!\to\! d,\tau)=(\gamma,\rho,\delta,D_{JS})$ is the edge state.
+
+\begin{proposition}[Blind spots are complementary]\label{prop:blind}
+(i) If $Y=X$ changes to $Y=-X$ with symmetric granulation, then
+$\gamma$ is unchanged and, for even $K$, $\rho$
+drops to its floor while $|\Delta\delta|$ (with odd $K$ the
+central granule keeps its rule)
+is maximal. (ii) If the conditional law of $Y$ given $X=g$ is perturbed for
+a single $g$ occupying mass $\pi_g$, by $\epsilon$ in total variation, then
+$\gamma$ moves by at most $O(\pi_g\epsilon)$ while $D_{JS}$, on
+$\alpha$-smoothed tables with positive cells, moves by
+$\Theta(\pi_g\epsilon^2)$. (iii) For a subset-joint dependence
+$x_d=f(x_{i_1},x_{i_2})$ with $f$ the parity of two independent, uniformly
+distributed parent granules, no pair-edge statistic moves
+off its null value ($\gamma$, $\delta$ and $D_{JS}$ stay at
+their independence floors and $\rho$ compares two noise modal maps). Hence no single pair-level component covers the family
+{breakdown, inversion, subset-joint emergence}: by (i) $\gamma$ is
+blind to inversion while $\rho$ drops to its floor and $|\Delta\delta|$ is maximal; by (ii) $\gamma$ moves by at most $O(\pi_g\epsilon)$ on reshaping while $D_{JS}$ responds at order $\Theta(\pi_g\epsilon^2)$ (neither $\rho$ nor $\delta$ is bounded by (ii)); and by (iii) every
+pair-level statistic is blind to subset-joint emergence, which the subset
+edges recover (Figure~\ref{fig:coverage}).
+\end{proposition}
+
+\noindent\emph{Proof sketch.} (i) With symmetric reference quantiles,
+granulation commutes with negation ($g(-x)=K-1-g(x)$): the injected table
+is the reference table with columns reversed, so $\pi$, the row
+confidences $c_g$, and $\gamma$ are unchanged, while the modal map becomes
+$v\mapsto K-1-v$, dropping $\rho$ on the moved rows and flipping the sign
+of $\delta$. (ii) Redistributing off-modal mass inside a granule
+$g^\ast$ pins the modal confidence, so $\gamma$ moves by at most
+$\pi_{g^\ast} O(\epsilon)$ while the conditional law of $g^\ast$ moves by
+$\Theta(\epsilon)$ in total variation, hence $D_{JS}$, whose cells are
+positive after $\alpha$-smoothing, by
+$\Theta(\pi_{g^\ast}\epsilon^2)$. (iii) For a parity map
+$x_d=f(x_{i_1},x_{i_2})$ of two independent, uniformly distributed parent
+granules, every pair table has
+independent margins and uniform conditionals, so all pair statistics sit
+at their null values while the subset edge is deterministic ($\gamma=1$). Constructions (i)-(iii) give: $\gamma$ blind to inversion (i) and
+bounded at order $\pi_g\epsilon$ under reshaping (ii), with neither $\rho$ nor $\delta$ constrained by (ii); and every pair-level
+statistic blind to the subset-joint construction (iii), which the subset
+edge recovers. No single pair-level component therefore covers the three
+canonical changes.
+Full constructions are given in the Supplemental Material (S.6).
+
+\begin{figure}[t]\centering\input{fig_mechanism.tex}\caption{Coverage of the three canonical changes studied in \S\ref{sec:quad}: filled circles mark statistics that fire for that
+change (on the subset edge where marked ${\rm sub}$, at pair level
+otherwise), hollow circles statistics that can also respond, and squares
+statistics blind at pair level (by (i)/(iii)). The detection-family columns
+$\gamma$ and $\delta$ (dashed frames) cover all three changes:
+$\gamma$ reaches emergence via the subset edge, while $\delta$
+remains pair-level; the $\gamma$ column alone misses
+inversion.}\label{fig:coverage}\end{figure}
+
+Empirically, Proposition~\ref{prop:blind} predicts that a
+$\gamma$-only detector will miss inversion events while the full
+encoding detects them, a prediction confirmed in §\ref{sec:gate}
+(Table~\ref{tab:e0}). Four further properties of the standardised
+degree (the bounds $1/K\le\gamma\le1$, the crisp-table correspondence
+with the Pawlak degree, inversion invariance, and coarsening
+monotonicity) are stated in §\ref{sec:grounding}
+(Propositions~\ref{prop:bounds}--\ref{prop:granular}, proofs in the
+Supplemental Material), and a margin-preservation lemma in
+§\ref{sec:protocol} states that any per-channel score is invariant under
+our injections in the window-level sense, so that a point detector's
+detection rate on injected windows equals its window-level false-alarm
+rate (Lemma~\ref{lemma:margin}).
+
+We state them together because the \emph{design
+consequence} is the point: \emph{detection} uses the two continuous
+difference components $\Delta\gamma$ and $\Delta\delta$ only. Two further
+exclusions are deliberate. $\rho$ is excluded because its discrete jumps
+inflate family maxima. $D_{JS}$ is excluded for a structural reason. On
+the reference-significant edges that \RDSG{} monitors, the relation is
+close to deterministic. Adjacent sliding windows then induce almost
+identical conditional tables, $D_{JS}$ degenerates to zero under the null,
+and its sliding-split standard deviation vanishes, so no $z$-standardisation
+of the kind the family thresholding requires is well defined. $D_{JS}$ is
+therefore an \emph{attribution and typing} statistic. It responds
+strongly once a relation is reshaped, which is exactly the regime
+Proposition~\ref{prop:blind}(ii) describes, but it cannot serve as a
+calibrated detection component. Detection power against the inversion
+blind spot is carried by $\delta$: dropping it re-instates the blind spot
+measurably (\S\ref{sec:ablation}). The converse does not
+hold. The direction component is necessary for inversion but not
+exclusive to it, because on a directional edge a breakdown also returns
+$\delta$ toward zero. The component-firing matrix of \S\ref{sec:e2}
+exhibits exactly this asymmetry. The four statistics remain jointly
+informative. Proposition~\ref{prop:blind} is a statement about the edge
+state, not about which of its components enter the calibrated family. The
+division of roles (two components detect, two interpret) is itself a design
+consequence of that proposition.
+\subsection{Relation to classical dependency degrees}\label{sec:grounding}
+The soft degree is not an analogue of the rough-set dependency degree but
+its confidence-weighted extension. We first collect the four formal
+properties of the standardised degree used throughout; full proofs are
+given in the Supplemental Material (S.1--S.4).
+
+\begin{proposition}[Bounds and extrema]\label{prop:bounds}
+Let $\pi$ be a copula-standardised granular table over $K$ decision granules.
+Then $1/K \le \gamma(\pi) \le 1$. Also $\gamma(\pi)=1$ iff every occupied
+row is deterministic (all mass concentrated in one decision granule), and
+$\gamma(\pi)=1/K$ iff every occupied row is uniform over the $K$ decision
+granules.
+\end{proposition}
+
+\begin{proposition}[Crisp-table correspondence with the Pawlak degree]
+\label{prop:crisp}
+Let $T$ be a decision table in which every granule $g$ induces a constant
+decision (a crisp decision subtable after granulation), and let
+$\pi_{\mathrm{raw}}(T)$ be its unsmoothed empirical granular table. Then the
+Pawlak positive region is $POS(T)=\{t:\ \text{the granule of } t \text{ is
+deterministic}\}$, the classical degree is
+$\gamma_P(T)=|POS(T)|/|U|$, and $\gamma(\pi_{\mathrm{raw}}(T))=\gamma_P(T)$.
+In general, for $\beta\in(0,1]$ and any granular table $\pi$, the
+variable-precision degree
+$\gamma_\beta=\sum_{g:\,c_g\ge\beta}\pi_g$ counts rows whose confidence
+reaches $\beta$, and
+$\gamma(\pi)=\sum_g \pi_g c_g \ge \beta\,\gamma_\beta$, with equality iff
+every occupied row has confidence exactly $\beta$ (rows with $c_g<\beta$
+contribute $\pi_g c_g>0$, since $c_g\ge 1/K$ on occupied rows). Thus
+$\gamma(\pi)$ is a
+confidence-weighted extension of the $\beta$-positive region measure: it
+replaces the binary threshold at $\beta$ by the full confidence profile.
+\end{proposition}
+
+\begin{proposition}[Inversion invariance of $\gamma$]\label{prop:inv}
+Let the pair $(x_i, x_d)$ satisfy a deterministic relation with granule map
+$\varphi$ (i.e.\ $x_d$'s granule is a function $\varphi$ of $x_i$'s granule),
+and let the output channel be re-encoded by an order-reversing permutation
+of its granules, $r(v)=K-1-v$ (with symmetric quantiles, granulation
+commutes with this recoding). Then $\gamma$ is unchanged, $\rho$ drops by
+the mass of the rows whose modal rule changed (to its floor when every
+occupied row changes), $|\delta|$ is unchanged, and the sign of $\delta$
+flips.
+\end{proposition}
+
+\begin{proposition}[Monotonicity of $\gamma$ under decision-granule coarsening]
+\label{prop:granular}
+Let $\pi$ be a granular decision table over $K$ decision granules, with row
+occupancies $\pi_g$ ($\sum_g \pi_g = 1$) and conditional rows
+$\pi_{\cdot\mid g}$. Let $T'$ be the coarsened table obtained by replacing
+the decision granules by a partition of them into $K' < K$ groups, leaving
+the condition granules untouched, so that
+$\pi'_{v'\mid g} = \sum_{v \in C_{v'}} \pi_{v\mid g}$ and $\pi'_g = \pi_g$.
+Then $\gamma(\pi') \geq \gamma(\pi)$, with equality if and only if in every
+occupied row no coarsened group carries more mass than the row's modal
+column, that is
+$\max_{v'} \sum_{v \in C_{v'}} \pi_{v\mid g} = \max_v \pi_{v\mid g}$.
+Equivalently: the group containing the modal column holds no mass outside
+that column, and every other group sums to at most the modal column's mass.
+\end{proposition}
+
+With these properties in place, the connection to Pawlak's framework
+is precise in three senses.
+
+\textbf{(C1) Crisp-table correspondence.} On a decision table whose
+granules induce constant decisions, the modal confidence of every occupied
+granule is one, and $\gamma$ equals the classical degree
+$|POS(T)|/|U|$ measured on the same positive region
+(Proposition~\ref{prop:crisp}). This establishes that $\gamma$ is
+a strict generalisation of Pawlak's degree: it recovers the classical
+measure when the table is crisp and degrades gracefully as noise blurs
+granule boundaries. The correspondence in
+Proposition~\ref{prop:crisp} holds for the raw table
+$\pi_{\mathrm{raw}}(T)$; the operational degree is computed on the
+$\alpha$-smoothed, IPF-standardised table $\pi_{\mathrm{sm}}$, on which a
+crisp row with $n_g$ observations has smoothed confidence
+$(n_g+\alpha/K)/(n_g+\alpha)$ before re-standardisation, so
+$\gamma(\pi_{\mathrm{sm}})$ approaches the Pawlak value
+as row counts grow rather than attaining it exactly.
+
+\textbf{(C2) Variable-precision reading.} Ziarko's $\beta$-positive
+region $\mathrm{POS}_\beta$ counts granules whose conditional confidence
+$c_g$ reaches $\beta$. The soft degree replaces this binary threshold by
+the full confidence profile: $\gamma = \sum_g \pi_g c_g$ is the
+occupancy-weighted integral of the confidence spectrum. When $\beta=1$,
+$\gamma_\beta$ equals the crisp-table degree; when $\beta<1$,
+$\gamma_\beta \leq \gamma / \beta$ (Proposition~\ref{prop:crisp}).
+The advantage of the soft form on real-valued series is that row
+confidences concentrate near $1/K$ under independence, so the floor is
+exactly $1/K$ and any excursion above it is interpretable as dependence,
+whereas a fixed $\beta$ either empties or floods the positive region
+depending on the noise level.
+
+\textbf{(C3) Boundary-region decomposition.} The Pawlak boundary
+region $BN(T) = U \setminus POS(T)$ consists of objects whose granule
+membership is ambiguous. In the soft reading, $\gamma$ quantifies the
+degree to which the boundary has been resolved: $\gamma = 1/K$ means the
+boundary is fully unresolved (maximum uncertainty), and $\gamma = 1$ means
+the boundary is fully resolved (each granule maps to a unique decision).
+The three companion statistics ($\rho, \delta, D_{JS}$) characterise
+\emph{how} the boundary moves when the relation changes: $\rho$ tracks
+whether the modal rule within each boundary cell has flipped, $\delta$
+tracks whether the direction of statistical association (not a causal
+direction) has reversed, and $D_{JS}$
+measures the redistribution of conditional mass within the boundary.
+This decomposition is the theoretical basis for typed alarms
+(\emph{breakdown} = modal mass shrinks ($\gamma$ drops); \emph{inversion} =
+modal mass conserved while the internal structure reverses; \emph{emergence} =
+modal confidence rises above the independence floor).
+
+\textbf{Where rough-set theory specifically contributes.} The granular
+decision-table construction is not cosmetic labelling; three steps
+depend on it. First, the equal-frequency granulation $\Phi^K$ defines
+an indiscernibility relation on real-valued channels; the contingency
+table is the cardinality of the corresponding granule-level partition,
+which is what makes the statistics computable by integer counting and
+the block permutation a valid resampling of the partition (rather than
+an approximation). Second, $\gamma$ is the soft variable-precision
+extension of the Pawlak dependency degree: on crisp tables it equals
+$|POS(T)|/|U|$ exactly (Proposition~\ref{prop:crisp}), and its
+boundary-region decomposition (C3 above) is Pawlak-specific, with no
+counterpart in generic dependency statistics. Third, the dual-channel
+graph uses the reference dependency degree as the selection criterion
+for the rupture channel; replacing it with a generic association measure
+(e.g., absolute Spearman correlation) would select different edges and
+change what is monitored. A matched ablation swaps the edge-selection criterion while holding
+the detection family, hosts, and FA budget fixed: MI-ranked versus
+$\gamma$-ranked candidate edges yield $0.15$ against $0.21$ on
+METR-LA, $0.30$ against $0.25$ on PEMS-BAY and $0.36$ against $0.40$ on
+Beijing-Air, where the 5{,}520-point test span realises 9--11 events
+per seed (99 across ten seeds; the isolation band excludes some planned
+injections), so its per-type composition varies. Both selectors rank on
+the same tail window, but MI re-estimates its bin quantiles there whereas
+the $\gamma$ selector uses full-reference frozen bins, so this compares
+the two practical schemes rather than a strict single-factor intervention.
+The selection criterion is therefore not load-bearing at
+this configuration: both rankings deliver comparable recall, and the
+robustness of the monitor to how candidate edges are ranked is itself
+a deployment asset. What $\gamma$-selection buys is not recall but
+interpretability: the monitored statistic and the selection statistic
+are the same quantity.
+
+\textbf{Why not simply discretise and compute classification accuracy?}
+With the modal rule re-derived per table, resubstitution accuracy is
+numerically this $\gamma$; the contribution of the rough-set reading lies
+elsewhere. Three properties distinguish the calibrated monitoring use from
+the sample-level accuracy of a fixed discretised classifier.
+First, \emph{coarsening monotonicity} (Proposition~\ref{prop:granular}):
+$\gamma$ never decreases when decision granules are coarsened, and is
+exactly invariant precisely when, in every occupied row, no coarsened
+group carries more mass than the row's modal column (the group holding
+the modal column must not pool mass from other columns, and no other
+group may exceed it), whereas for a fixed rule the pooled-label accuracy can only increase
+or stay (an artefact of label pooling), and with the rule re-derived per
+table it equals this $\gamma$ and inherits its monotonicity. This makes $\gamma$ a property of the
+\emph{dependency structure} rather than of a particular granularity choice.
+Second, \emph{exact independence floor}: $\gamma = 1/K$ if and only if every
+conditional distribution is uniform on the fully standardised table
+(Proposition~\ref{prop:bounds}), giving a calibrated null with no
+estimation required beyond the standardisation itself. A fixed-rule accuracy
+has no such floor.
+Third, \emph{boundary structure}: the complement obeys the strict identity
+$1-\gamma=\sum_g \pi_g(1-c_g)$, the occupancy-weighted
+non-modal (soft-boundary) mass, which on unsmoothed crisp tables (every occupied row fully determined, so both masses vanish) coincides with the Pawlak boundary-region mass and in general exposes where
+decision uncertainty is concentrated; the companion statistics resolve which
+kind of boundary change occurred. A fixed-rule accuracy offers no such
+region-level accounting.
+For a rule re-derived per table these properties coincide with $\gamma$'s, as
+noted; the distinction is from the fixed-rule accuracy baseline, and these
+three properties are what make the degree a calibrated monitor: inversion
+leaves the degree and a refitted accuracy unchanged and is carried by the
+direction statistic (\S\ref{sec:ablation}).
+
+\subsection{Dual-channel candidate graph}\label{sec:graph}
+
+Scanning all $n(n-1)|\tau|$ directed pairs at every boundary is self-defeating:
+the family of null hypotheses sets the alarm floor far above the signal. \RDSG{}
+defines its monitored graph once, at the primary granularity ($K{=}4$, long
+window):
+\begin{itemize}\itemsep2pt
+\item \emph{rupture channel $R$}: the top-$m_s$ unordered pairs by reference
+dependency degree, monitored at each pair's best reference lag $\pm1$;
+these host breakdowns and inversions;
+\item \emph{emergence pool $E$}: the bottom-$m_w$ pairs at lag 0, plus, for
+each weak target, subset edges over its $m{=}6$ closest weak partners. These
+host emergences, including subset-joint ones.
+\end{itemize}
+Both channels are evaluated at every (granularity $K$, window $w$) configuration,
+but the \emph{graph is shared}: the multi-scale machinery varies the estimator,
+not the hypothesis set, so the family stays small and the comparison across
+scales is meaningful. Hosts for controlled injections are drawn from the same
+graph; a detector is only asked about edges it monitors.
+
+\subsection{Self-scan budget calibration (SBC): thresholds as an input}\label{sec:calib}
+
+For every edge and component we track the boundary-level statistic
+$z_e(b)=|s_e(b)-\mu_e|/\sigma_e$, with $\mu_e,\sigma_e$ estimated from
+sliding adjacent window pairs inside the reference segment (the same
+construction as detection, so no transfer gap is introduced), a floor
+$\sigma_e\ge 0.2\,\mathrm{med}_c\sigma$ against degenerate units, and a
+unit-validity mask that removes edges whose null behaviour violates the
+standardisation (reference self-scan pruning). Three design decisions matter:
+\begin{enumerate}
+\itemsep2pt
+\item \emph{Component families, not max-over-components.} Taking the max over the four components at a single alarm threshold taxes every component with the others' tails; in particular the discrete rule-map component dominates the family maximum. \RDSG{} splits the family per component, assigns each a $\mathrm{FA}/\#\mathrm{components}$ budget (union bound), and alarms when any component exceeds its own threshold.
+\item \emph{Rolling-mean evidence.} A true rupture lifts a unit on consecutive boundaries (the window straddles the change), whereas a null peak does not persist. Aggregating $k=4$ consecutive standardised boundary values into the alarm statistic converts persistence into power (a library design option; the evaluated family scan uses per-boundary statistics, S.8).
+\item \emph{Self-scan alarm level.} The complete alarm procedure (union over scales and granularities) is executed once on the reference segment, and the alarm threshold is the smallest value whose self-scan alarm-sample rate meets the requested false-alarm budget (samples counted at the method's native scoring resolution; every method in every table is calibrated by this same rule). The requested rate is thus an \emph{input on the reference segment}; its
+transfer to the test segment is reported as measured (\S\ref{sec:exp}).
+\end{enumerate}
+After an alarm, edges are ranked by two-sided normal-tail $p$-values over
+the block-permuted statistic change, with Benjamini--Hochberg control over
+the family \citep{benjamini1995}; when the procedure yields no rejections,
+the ten largest-$z$ edges are reported as an unconstrained ranking rather
+than FDR-controlled findings.
+
+\subsection{Event typing}\label{sec:typing}
+
+Alarms are merged into events (network-specific gap tolerance: 512 points
+on the 5-minute networks, 256 on the hourly network; S.8). For each event, the
+peak edge is identified on the union statistic and typed at an event-aligned
+window pair by a channel-aware rule: an $R$-channel event with reference
+dependency above the graph median and a significant negative
+$\Delta\gamma$ is a \emph{breakdown}; with $|\Delta\gamma|$ below threshold
+but rule-map loss, direction flip or conditional divergence above reference
+quantiles it is an \emph{inversion}; an $E$-channel event with significant
+positive $\Delta\gamma$ is an \emph{emergence} (subset edges attribute
+subset-joint emergence). The rule uses only reference-estimated quantities.
+
+\subsection{Margin-preserving injections}\label{sec:inject}
+
+Synthetic evaluation of relational detectors needs anomalies that do not
+accidentally create marginal outliers. Our injections re-order \emph{already
+observed} values inside a window: inversion re-orders channel $j$'s window
+values to a target Spearman correlation with $i$ (the reference correlation's
+sign flip, so that inverting an already negative pair is a real change);
+breakdown permutes them; emergence aligns them; subset-joint emergence aligns
+them to the rank-sum of two partners. The multiset of $j$'s values is
+preserved exactly, so any detector whose score is a function of single-channel
+marginals has exactly its false-alarm rate as detection rate, which is the
+property the mechanism experiment tests.
+
+
+\begin{table}[t]\centering\small
+\caption{Algorithm 1: RDSG detection pipeline.}
+\label{alg:rdsg}
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Input:} $X_{\mathrm{ref}}, X_{\mathrm{tst}}, (K, w, b, B, q)$} \\
+\multicolumn{2}{l}{\textbf{Output:} Typed alarm events} \\ \hline
+\multicolumn{2}{l}{\textbf{Fit (reference segment):}} \\
+1 & $G_{\mathrm{ref}} \gets \Phi^K(X_{\mathrm{ref}})$ \\
+2 & Build $\mathcal{E}_R$ (strong pairs) and $\mathcal{E}_E$ (weak pairs) \\
+3 & Compute $\mu_e, \sigma_e$ from sliding splits \\
+4 & Prune edges with self-scan $z > 5.5$ \\
+5 & Set $\theta_c$ by reference self-scan to meet the FA budget \\ \hline
+\multicolumn{2}{l}{\textbf{Detect (test segment):}} \\
+6 & for each boundary $b$ \\
+7 & \quad Compute $z_e(b)$ for all edges $e$ \\
+8 & \quad $S_e \gets$ $z_e(b)$ (rolling mean optional; family uses per-boundary $z_e$, S.8) \\
+9 & \quad if $\exists c:\max_e S_{e,c} > \theta_c$ then alarm \\
+10 & Merge alarms into events (network-specific gap, S.8) \\ \hline
+\multicolumn{2}{l}{\textbf{Type:}} \\
+11 & for each event \\
+12 & \quad Localise peak edge (BH-FDR) \\
+13 & \quad $\Delta\gamma < 0 \Rightarrow$ breakdown \\
+14 & \quad $|\Delta\delta|$ large $\Rightarrow$ inversion \\
+15 & \quad $E$-channel $\Rightarrow$ emergence \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[t]\centering\small
+\caption{Default hyperparameters. Structural values ($K$, $w$, $m_s$,
+$m_w$) are fixed once on the synthetic gate; the rest are untuned
+design defaults (S.8, S.13), frozen before real-data evaluation.}
+\label{tab:params}
+\begin{tabular}{lcl}\hline
+Parameter & Default & Role \\ \hline
+$K$ & 4 & Granules per channel \\
+$w$ & 128 & Detection window (points) \\
+$b$ & 32 & Block length (stride) \\
+$B$ & 499 & Block permutations \\
+$q$ & 0.05 & BH-FDR level \\
+$\alpha_{\max}$ & 0.01 & maxT alarm level \\
+$k_{\mathrm{roll}}$ & 4 & Rolling-mean length (library option, not exercised) \\
+$m_s$ & 16 & Strong pairs (R channel) \\
+$m_w$ & 24 & Weak pairs (E channel) \\
+$z_{\mathrm{prune}}$ & 5.5 & Self-scan pruning cap \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Computational complexity}\label{sec:complexity}
+
+\textbf{Time.} Per detection window, the online cost is
+$O(E \cdot C \cdot K^{|A_{\max}|}\times K)$ for the table update and statistic
+computation, where $E$ is the number of monitored edges, $C$ the number
+of detection components ($C{=}2$), and $K^{|A_{\max}|}\times K$ the largest
+contingency table size. For the default configuration ($E{=}116$,
+$K{=}4$, $|A|{\leq}2$), this yields approximately $14{,}848$ table
+cells per boundary scan. The one-time fit on the reference segment
+costs $O(E \cdot B) \cdot K^{|A_{\max}|}\times K$ for the block-permutation
+calibration, where $B{=}499$; in practice this takes 2--30
+seconds per configuration on a workstation (the S.15 fit column covers
+ranking and standardisation only).
+
+\textbf{Space.} The detector stores $E$ contingency tables of size
+$K^{|A|} \times K$ (rolling buffer of $w/b$ blocks), $E \times C$  \\
+calibration constants, and the frozen granulation bounds ($n \times
+(K{-}1)$). At the default settings the online detector runs under 35\,MB
+resident on a Raspberry Pi 4B (measured in \S\ref{sec:sens}); the
+workstation process reading after fit is 170--171\,MB at $n{=}40$ (S.15).
+
+\textbf{Comparison with baselines.} Partial correlation requires
+$O(n^2)$ per window with no calibration state; LOF requires
+$O(n \log n)$ per query point after $O(n^2)$ indexing; GDN requires
+a one-time training cost of $O(\text{params} \cdot \text{epochs})$
+dominating all baselines. \RDSG{} trades a higher per-window cost
+for the calibration guarantee: on the gas pipeline (9 channels),
+the full pipeline runs in \eSevenOurs{}\,s versus \eSevenCorr{}\,s
+for the correlation baseline. On a
+Raspberry Pi 4B, the per-window update is 459\,ms at 120 edges,
+well within the arrival interval of new detection windows
+(\S\ref{sec:sens}).
+
+\section{Experiments}\label{sec:exp}
+
+\subsection{Protocol}\label{sec:protocol}
+
+\textbf{Datasets.} (i) A synthetic factor system (12 channels in four blocks:
+strong positive, strong negative, moderate, independent) as a capability gate
+where ground truth is exact; (ii) METR-LA (first 40 fully observed
+channels, 5-min) \citep{li2018dcrnn},
+(iii) Beijing
+multi-site air quality (32 station-variable channels, 1-h, missing values
+linearly interpolated per channel) \citep{liang2015beijing,uciBeijingAir}
+and (iv) PEMS-BAY
+(first 40 fully observed channels, 5-min) \citep{li2018dcrnn} with injections on real dynamics (10 inversion + 10 breakdown + 10 emergence + 5 subset-joint events per seed, lengths 30--120 points on the 5-minute networks and 12--48 points on the hourly network); (v) the MSU gas pipeline
+(9 channels; 53 labelled attacks; longest clean stretch as reference) with
+real attacks \citep{morris2015gas}; and (vi) the WADI water-distribution testbed \citep{ahmed2017wadi}, a 93-sensor, 14-day network with 14 staged cyber-attacks, using the November 2019 release (A2) with the top 40 channels by reference variance and the last 12{,}000 reference points at 1-second sampling. Channel subsets, slices and selection rules per network: S.18. None of SWaT/SMD/PSM/MSL enters the main evaluation (scope probe: S.20):
+\footnote{SWaT \citep{goh2017swat,mathur2016swat} was explored but excluded: the publicly 
+available preprocessed release has an empty attack-label field, 
+preventing reliable event-level evaluation. WADI, from the same 
+testbed family with richer labels, is used instead.}
+their labelled anomalies are overwhelmingly point-visible (channel-value or
+single-sensor failures), a regime the point-footprint decomposition of the
+gas log already quantifies, and no public dataset labels relational
+failures on dense sensor networks, the gap that the margin-preserving
+injection suite plus the labelled ICS attack logs are designed to fill.
+
+\textbf{Baseline configuration and fairness.} Learned baselines use the
+hyperparameters of their original publications (GDN: embedding 16, hidden 64,
+window 32; six training epochs with a held-out calibration split, a
+resource-constrained budget that may under-train GDN);
+statistical baselines use window sizes matched to ours and reference-segment
+self-scan thresholds at the same false-alarm budget. Two recent deep scorers
+(the Anomaly Transformer \citep{xu2022anomaly} and TranAD \citep{tuli2022tranad})
+are included as \emph{compact reimplementations}, not reproductions of the
+published pipelines: both are trained on the reference segment only (no
+labelled anomalies; window 128, $d_{\rm model}{=}64$, 2 layers, 5 epochs,
+ten injection seeds), the AT arm retrains the official architecture with a
+simplified jointly-minimised association discrepancy, and the TranAD arm is
+a reduced single-encoder reconstructor. Their point-window scores are merged with a 512-point gap (as ours
+on the 5-minute networks; our hourly-network gap is 256) and are calibrated by the same rate-based
+self-scan, so these rows quantify compact deep scorers under the common
+budget, not peak published performance (arms trained up to ten times
+longer leave the ordering unchanged; S.14). \RDSG{} hyperparameters
+were frozen \emph{once}, before any real-data evaluation, and reused
+unchanged everywhere: the structural values ($K$, $w$, and the edge
+budgets $m_s$, $m_w$) on the synthetic gate; the standardisation
+constants ($\alpha$, IPF iterations) as untuned design defaults
+(audited in S.13); the calibration constants ($B$, $q$) by convention
+(S.8); no per-dataset tuning was performed.
+
+\textbf{Metrics.} Event-level recall (detection window overlaps the event),
+false alarms per day, median detection delay, type accuracy on detected
+events. (Point-adjusted F1 is reported in the reproduction package
+rather than the main tables.) All per-type
+recalls use pooled one-to-one matching for overall recall (each predicted
+event credited to at most one true event); per-type recalls condition the
+true set on the event type and match against all predicted events (S.8), so
+per-type numbers may exceed the overall figure when a single predicted
+event spans multiple true types. All methods (ours,
+$\gamma$-only ablation, IF/LOF aggregations, GDN \citep{deng2021gdn},
+correlation-matrix and partial-correlation divergences, VAR-residual
+divergence, granular-MI divergence, bivariate Granger) receive the same
+reference-segment self-scan and false-alarm budget. Budgets are matched
+as \emph{requested} on the reference segment; realised test-segment
+false-alarm rates are reported per method (Table~\ref{tab:e2}) and may
+differ across methods.
+
+\textbf{Margin-preserving injections.} Every injection on real dynamics
+re-orders the observed values of one channel inside its window, so
+marginals are preserved point-wise and per-channel detectors are blind by
+construction:
+
+\begin{lemma}[Margin-preserving injections]\label{lemma:margin}
+Fix a window $W$ and a target channel $j$. Any injection that outputs a
+permutation of the observed values $\{x_j(t)\}_{t\in W}$ leaves the empirical
+marginal distribution of $j$ (and of every other channel) unchanged
+point-wise. Consequently, for any detector whose per-time score is a fixed function of the
+single-channel value (any model or normalisation being fitted strictly
+outside the window; scores that pair the target with another channel, such
+as prediction residuals, are not covered), the multiset of scores over $W$ is unchanged by
+the injection, hence so is the number of threshold exceedances inside $W$ and
+the indicator that at least one exceedance occurs in $W$. Detection rates that depend only on these window-level exceedance
+counts (for example detecting a window event by requiring at least one
+exceedance inside it) are therefore unchanged. Gap-merged event-level
+metrics are not claimed invariant (merging can regroup exceedances across
+window boundaries); the event recalls in \S\ref{sec:exp} are reported as
+measured.
+\end{lemma}
+
+\noindent The argument is that a permutation of a multiset preserves its
+order statistics, so the score multiset over $W$ is unchanged and every
+threshold exceedance stays inside $W$; the time stamps of exceedances may move
+within $W$, and gap-merged event counts may split or merge, so event-count
+functionals (such as false events per day) are covered empirically rather
+than by the lemma. The full proof, with these scope conditions, is given
+in the Supplemental Material (S.5).
+
+\textbf{Reproducibility.} Every number in every table is generated from the
+result files by a single script; injections, seeds and configurations are
+shipped with the code, together with per-seed raw metrics, so that each entry of each table can be traced to its generating run.
+
+\textbf{Evidence positioning.} The recall headlines of the injection suites
+come from margin-preserving re-orderings, under which point detectors are
+blind by construction (Lemma~\ref{lemma:margin}). On the gas-pipeline attack
+log, 50 of 53 attacks carry a point footprint and just
+three are purely relational, so the real-world evidence is complementarity
+with point monitors plus the inversion case study of \S\ref{sec:e1},
+not substitution of them.
+
+\subsection{Capability gate on the synthetic factor system}\label{sec:gate}
+
+\begin{figure}[t]\centering
+\begin{minipage}[t]{0.49\textwidth}\centering
+  \includegraphics[width=\linewidth]{figs/e0_mechanism.pdf}
+
+\small (a)
+\end{minipage}\hfill
+\begin{minipage}[t]{0.46\textwidth}\centering
+  \includegraphics[width=\linewidth]{figs/e6_component.pdf}
+
+\small (b)
+\end{minipage}
+\caption{(a) Capability gate: event recall by injected type (synthetic factor system, \eZeroNSeeds{} seeds, common false-alarm budget); point aggregations sit at their floors and the $\gamma$-only ablation is blind to inversion. (b) Injected type versus the component that fired (direction component, dependency-degree component, or emergence channel) over detected events (METR-LA suite); inversions fire the direction component predominantly, matching Proposition~\ref{prop:blind}.}\label{fig:e0}\label{fig:e6}\end{figure}
+
+Figure~\ref{fig:pipeline} summarises the pipeline. Figure~\ref{fig:e0}(a) and Table~\ref{tab:e0} report the gate (10 injection seeds). The full detection family
+reaches \eZeroRdsRecall{} overall recall at \eZeroRdsFa{} false alarms per
+day; the $\gamma$-only ablation collapses to \eZeroGammaRecall{} and, on
+inversion, to \eZeroGammaInv{}, the blind spot measured, not argued. The gate is a diagnostic stress test, not a pass/fail screen; no arm
+meets the registration card's aspirational per-type thresholds, and the
+full recall decomposition is the reported quantity. Point aggregations
+and the MI graph sit at their floors (IF
+\eZeroIfRecall{}, LOF $0.04$, MI-graph $0.06$) (Wilcoxon
+$p=\eZeroPval$ over seeds). Two readings deserve emphasis. First, the
+components are \emph{not} interchangeable: the direction component retains most
+recall on near-linear blocks, and the
+component-family split is what lets each component work at its own noise
+level. Second, the gap between \RDSG{} and $\gamma$-only \emph{widens} as the
+candidate family is cleaned (graph definition, pruning), confirming that the
+bottleneck was never the number of edges but the taxonomy of the statistics.
+
+\begin{table}[t]\centering\small
+\caption{Capability gate (synthetic factor system, margin-preserving
+injections, \eZeroNSeeds{} seeds). Overall: pooled event recall across all
+types; per-type cells at the calibrated operating point (pooled
+one-to-one matching, S.8). FA cells of the ablation (same calibration)
+and the FA-matched aggregation (rate-matched by construction, S.8) are
+omitted.}
+\label{tab:e0}
+\begin{tabular}{lccccc}
+\hline
+ & overall & inversion & breakdown & emergence & FA/day \\
+\hline
+\RDSG{} & \eZeroRdsRecall & \eZeroRdsInv & \eZeroRdsBrk & \eZeroRdsEmb & \eZeroRdsFa \\
+$\gamma$-only ablation & \eZeroGammaRecall & \eZeroGammaInv & \eZeroGammaBrk & \eZeroGammaEmb & -- \\
+IF-agg (FA-matched) & \eZeroIfRecall & \eZeroIfInv & \eZeroIfBrk & \eZeroIfEmb & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Injection suites on real networks}\label{sec:e2}
+
+Table~\ref{tab:e2} reports overall event recall on the three real networks.
+Three findings. (1) \emph{No method dominates everywhere, and the splits are
+informative}: on METR-LA, five-minute traffic whose pairwise associations are dominated
+by a shared daily cycle and are close to linear-Gaussian, the windowed
+relational monitors fall to $0.02$--$0.12$ under the rate budget (their
+overlapping-cadence null tails push thresholds above the signal), the strongest external baseline under this protocol is the compact
+Anomaly-Transformer arm at
+$0.19$, and \RDSG{} exceeds it at $0.46$ ($p=\eTwoPStrongMetr$).
+On Beijing air quality, where station couplings are non-linear and
+non-stationary, the partial-correlation divergence is nominally ahead of
+the family at $0.24$ against $0.23$ (not significant, $p=\eTwoPStrongBj$), and the $\gamma$-only ablation leads both at
+$0.29$; the attribution below explains why. On PEMS-BAY the LOF point aggregation is the strongest
+external baseline at the common requested false-alarm budget and \RDSG{}
+exceeds it ($0.57$ versus $0.49$); the realised rates
+differ ($0.15$ versus $0.42$ false alarms per day, Table~\ref{tab:e2}), so
+this is an operating-point comparison at the protocol budget, not a
+realised-FA-matched one and not a statement about all thresholds. Several attacks there also create large point deviations, and we
+return to this in the gas-pipeline analysis.
+
+\emph{Why the budget counts alarm samples, not merged events.} Counted in
+merged events per day (the diagnostic reported in the FA/d columns), the
+budget can be arbitraged: densifying the alarms merges them into fewer,
+longer events, so a near-continuously alarming configuration can satisfy an
+event-counted budget. Measured directly, the point aggregations on METR-LA
+reach $0.52$--$0.55$ recall within $0.25$ \emph{event} false alarms per day
+through boundary-window blobbing, and the family itself, asked for one
+alarm per day on METR-LA, realises $0.03$ event false alarms per day at
+$0.54$ recall (seed means). An event-counted budget is therefore arbitrageable under this merging
+rule; the alarm-sample rate used here is not, which is why the budget is
+defined on it. The effect is visible in the data: calibrating the relational
+baselines from sparse independent-pair nulls (44 null samples with a
+budget of 10 allowed crossings) inflates their METR-LA recall by factors
+from 2.8 to 4.3 (17 for the VAR residual monitor). The inflation is
+consistent with boundary-window blobbing under the event metric, though
+the per-event mechanism is not separately traced (diagnostics in the
+reproduction package); the native-cadence nulls used throughout remove
+the inflation. The full
+per-method sweeps (requested budgets and test-score quantiles, every seed)
+ship with the reproduction package. (2) \emph{The tuple is load-bearing}: on the synthetic gate the
+$\gamma$-only ablation collapses on inversion exactly as
+Proposition~\ref{prop:blind} predicts ($0.21$ vs.\ $0.47$ pooled recall,
+Table~\ref{tab:e0}); on the real networks its overall recall falls to
+$0.35$ on METR-LA and $0.49$ on PEMS-BAY (against $0.46$ and $0.57$ for
+the full detection family).
+Over seeds, the full detection family is significantly better than the $\gamma$-only
+ablation on METR-LA (Wilcoxon signed-rank, $n=\eTwoNSeeds$,
+$p=\eTwoPgOnlyMetr$) and PEMS-BAY ($p=\eTwoPgOnlyBay$), and the $\gamma$-only ablation
+in fact outperforms the full family on Beijing-Air ($p=\eTwoPgOnlyBj$ for
+the family-over-$\gamma$ one-sided test; reverse $p\approx 0.009$;
+$0.29$ versus $0.23$), the boundary movement of $\gamma$ carrying the
+evidence on that dataset; the attribution below quantifies the cost). A component-level
+attribution of the alarms explains the Beijing split: there the full
+family predicts fewer events than its $\gamma$-only ablation on 8 of
+10 seeds (7 versus 9.5 at the median), the direction component's
+extra alarms merging events that $\gamma$-only credits separately, a
+pattern consistent with the merging mechanism, though the two variants
+are calibrated independently so the alarm sets are not nested, so
+the family's pooled recall falls below the ablation's. The component that adds true detections on the traffic networks costs
+pooled-matching credits here. On METR-LA, 84 of 117 detected events involve
+the direction component. Against the strongest \emph{external} baseline
+the differences favour \RDSG{} significantly on METR-LA and
+PEMS-BAY (one-sided Wilcoxon $p=\eTwoPStrongMetr$ and $p=\eTwoPStrongBay$; both survive Holm across networks and baseline-selection adjustment (Westfall--Young, S.7))
+but not on Beijing-Air ($p=\eTwoPStrongBj$), where the strongest
+baseline is nominally ahead; per-seed tables,
+rank-biserial effect sizes, bootstrap intervals and paired differences
+against the strongest external baselines are given in the Supplemental
+Material (S.7), with a threats-to-validity summary in S.9. (3) \emph{Point-footprint and windowed-divergence methods are at
+their floor on two of three networks}: the deep point-window scorers (Anomaly Transformer, TranAD; Table~\ref{tab:e2}) reach only 0.08--0.22 recall (above the IF/LOF floor but far below the calibrated structural monitor), suggesting that, in this compact form, their association-discrepancy
+and reconstruction scores pick up boundary-window point artefacts rather
+than dependency changes themselves. IF detects almost
+nothing anywhere, and LOF stays at its floor on METR-LA and Beijing-Air
+(its PEMS-BAY strength is a point-deviation effect, below), the empirical content of
+Lemma~\ref{lemma:margin} for per-channel scores; GDN's floor is likewise an
+empirical outcome, though its learned multi-channel score falls outside the
+lemma's scope. A sample-level
+rough-set outlier baseline (neighbourhood-coverage scores \citep{hu2008neighborhood},
+max-aggregated, same budget) sits at
+the same floor (Table~\ref{tab:e2}, Rough-NN), as do classical change-point
+methods: CUSUM on the dependency-degree statistic reaches $0.05$ recall
+(METR-LA, ten seeds) and distance-correlation scoring $0.00$ (PEMS-BAY).
+The sample-scoring vs.\ dependence-monitoring distinction is empirical,
+not rhetorical.
+
+\begin{table}[t]\centering\small
+\caption{Event recall on real networks (margin-preserving injections,
+\eTwoNSeeds{}
+seeds; values are mean$\pm$ across-seed standard deviation; the requested false-alarm budget is $0.25$/day for every method,
+realised rates in the FA/d columns (merged-event diagnostic; the budget
+itself calibrates alarm samples, S.8); the R and E channels are each calibrated
+to this budget, so the union can realise up to twice the per-channel rate
+(S.8); subset-joint emergence included).}
+\label{tab:e2}
+\begin{tabular}{lcccccc}
+\hline
+ & \multicolumn{2}{c}{METR-LA} & \multicolumn{2}{c}{Beijing-Air} & \multicolumn{2}{c}{PEMS-BAY}\\
+ & Recall & FA/d & Recall & FA/d & Recall & FA/d\\
+\hline
+\input{gen/tab_e2_body.tex}
+\end{tabular}
+\end{table}
+
+\begin{table}[t]\centering\small
+\caption{Event recall by host-pair association (pooled over \eTwoNSeeds{} seeds and
+all injection types; host pairs split by reference-segment $|$Spearman$|\ge 0.9$
+into high- and lower-association groups, a strength split that does not by
+itself test functional form;
+subset-joint hosts listed separately).}
+\label{tab:e2c}
+\begin{tabular}{llcccc}
+\hline
+ & Host group & RDSG & Partially-corr & Corr-matrix & LOF-agg \\
+\hline
+\input{gen/tab_e2c_body.tex}
+\end{tabular}
+\end{table}
+
+
+
+Figure~\ref{fig:e6}(b) reports, for each detected injection event, which
+component fired (direction component on the rupture channel,
+dependency-degree component, or emergence channel). Read against
+Proposition~\ref{prop:blind}, the matrix is a theory check rather than a type
+predictor; it validates Proposition~\ref{prop:blind}'s component-level
+predictions, not type attribution accuracy. Inversions fire the direction component in 43 of the 57 detected inversion
+events ($75\%$), and breakdowns and emergences
+fire it too, which is why the component-triggered type rule of the text
+reaches only $\eTwoDMetrAcc{}$ pooled accuracy. The Beijing-Air figure
+($\eTwoDBjAcc{}$) stays low: alarms there spread across both channels and
+the trigger-based rule does not separate the types, although subset-joint
+emergence itself is typed at chance ($\eTwoDBjEmbTwo{}$). The type label therefore keeps its auxiliary status: it summarises detection evidence about the kind of structural change rather than a validated diagnostic type.
+
+Table~\ref{tab:e2c} splits the same injections by host-pair association; three
+structural facts stand out. First, on Beijing air quality the Gaussian divergence keeps pace with
+\RDSG{} on the lower-association host pairs (partial correlation $\eTwoCcBjNonPcorr$ against \RDSG's $\eTwoCcBjNonRdsg$),
+whereas on METR-LA it falls to $\eTwoCcMetrNonPcorr$ there, while \RDSG{} retains part of its power. On the strong-dependence
+(high-association host) pairs \RDSG{} leads on METR-LA and remains competitive on
+Beijing ($\eTwoCcBjLinRdsg$). Second, \RDSG{}'s own advantage concentrates
+on those strong-dependence hosts, by construction since the $R$ channel
+monitors reference-significant edges, and drops on weak hosts --- the
+honest boundary of the method rather than a contradiction. The deeper
+concern is circularity: a mechanism-organised suite could favour the
+family designed around it. Four choices mitigate, not eliminate, that risk: hosts
+derive from the reference-built candidate graph, never injection labels;
+margin preservation binds fixed single-channel value scores in-window
+(Lemma~1), not learned or windowed monitors; the labelled ICS
+attacks (53 gas, 14 WADI) involve no injection; and the edge-selection
+criterion is itself not load-bearing (\S\ref{sec:grounding}). A random-host
+audit (S.19) shows the family retains 0.40 recall with hosts outside
+the candidate graph, where all-pair baselines stay at their floors. Third, PEMS-BAY is
+dominated by large point deviations (LOF $\eTwoCcBayLinLof$--$\eTwoCcBayNonLof$),
+consistent with the gas-pipeline analysis. Finally, recall rises
+monotonically with event length ($\eTwoLenAVal$/$\eTwoLenBVal$/$\eTwoLenCVal$
+for $\eTwoLenAPts$/$\eTwoLenBPts$/$\eTwoLenCPts$-point events on METR-LA, pooled over
+seeds), quantifying the short-event boundary stated in the abstract.
+
+\subsection{Real attacks: gas pipeline operating curves}\label{sec:e1}
+
+
+\begin{figure}[t]\centering
+\begin{minipage}[t]{0.50\textwidth}\centering
+  \includegraphics[width=\linewidth]{figs/e1_curves.pdf}
+
+\small (a)
+\end{minipage}\hfill
+\begin{minipage}[t]{0.44\textwidth}\centering
+  \includegraphics[width=\linewidth]{figs/runtime.pdf}
+
+\small (b)
+\end{minipage}
+\caption{(a) Gas pipeline operating curves (event recall vs. false alarms per day; threshold swept over test-score quantiles). (b) Full-pipeline runtime comparison on the gas pipeline dataset (75K points, 9 channels, single core).}\label{fig:e1}\label{fig:runtime}\end{figure}
+
+Figure~\ref{fig:e1}(a) reports the operating curves. The gas pipeline offers 53 labelled attacks but only 27 consecutive clean
+minutes for reference. Any threshold calibrated there migrates when operating
+modes drift over the following ten hours. We therefore report complete
+operating curves (recall vs.\ false alarms per day, threshold swept over test
+score quantiles) rather than a single point. \RDSG{} reaches
+\eOneOursMaxRecall{} maximum recall and dominates all structural baselines at
+low false-alarm budgets: at $\le 5$ false alarms per day it retains
+a recall around $0.13$ while the correlation, partial-correlation,
+VAR-residual and Granger monitors detect essentially nothing, and the point
+IF aggregation needs more than $170$ false alarms per day to reach its
+(point-driven) $0.92$. LOF is the only competitor at very low budgets (recall
+\eOneLofRecallLowFa{} on a handful of large point-deviation attacks). We
+interpret the pattern rather than hide it. A point-footprint decomposition
+of the 53 attacks (window-wise maximum $|z|$ against the reference segment;
+the decomposition script and per-attack labels ship with the reproduction
+code) shows that \eOneCVis{} of \eOneCTotal{} attacks produce large point deviations that a
+per-channel method catches. The relational-only subset is too small (\eOneCRel{}
+attacks) to support any subset-level claim. \RDSG{}'s claim on this dataset
+is therefore the low-false-alarm end of the operating curve among
+\emph{structural} monitors, not an advantage over point detectors; on this
+log the two families are complementary. Read as a complementarity analysis (counting, at each family's own
+five-false-alarms-per-day operating point, the true events recovered by at
+least one family, without re-merging the combined alarm stream, whose
+false-alarm load can therefore exceed the per-method budget), the three
+families jointly reach $\eWThreeBUnion{}$ pooled recall against $\eWThreeBLof{}$ for the strongest single family. The complementarity is measurable, though it is a property
+of the deployment, not of any single detector.
+
+\textbf{WADI water distribution.} To test whether the calibrated rough-set monitor
+transfers to a denser, higher-rate ICS testbed, we evaluate on the WADI
+A2 release \citep{ahmed2017wadi}: 93 sensors at 1-second sampling, a
+14-day normal reference (top 40 channels by variance, last 12{,}000 points
+for calibration) and a single 2-day test segment with 14 labelled staged
+cyber-attacks, one labelled split, no injection seeds. We report sampled
+operating curves (thresholds swept over reference-score quantiles; the
+budgeted cells are curve readings, not pre-committed thresholds; a false
+alarm is a merged prediction overlapping no true attack). At $\le 5$ false
+alarms per day, \RDSG{} reaches $0.357$ recall (5 of 14 attacks; its
+pre-committed default threshold sits at $0.286$ recall and $\approx$52
+FA/day, and its curve maximum $0.857$ occurs only at $\approx$35 FA/day).
+The point aggregations are evaluable at this budget and sit at zero
+recall (IF-agg also reaches $0.857$, but only at $\approx$113
+FA/day), as does the Granger monitor on its five feasible grid points;
+the remaining three relational baselines attain no operating point at
+$\le 5$ FA/day on the sampled grid (grid minima 7.5--18
+FA/day), so their budgeted recall is not evaluable
+(Table~\ref{tab:wadi}): WADI attacks combine point deviations
+with dependency-level changes, and among methods measured at this budget
+only the calibrated structural monitor is non-zero.
+
+\begin{table}[t]\centering\small
+\caption{WADI A2 real attacks (single 2-day split, 14 attacks, no seeds):
+maximum event recall on the sampled operating grid and recall at $\le 5$
+false alarms/day. Dashes: no sampled operating point reaches the budget (grid minima
+7.5--18 FA/day), so the cell is not evaluable, not zero;
+0.000 cells are evaluated observed zeros. Bold marks the budgeted operating point of the proposed monitor.}
+\label{tab:wadi}
+\begin{tabular}{lcc}\hline
+Method & Max recall & @$\le 5$ FA/day \\
+\hline
+RDSG (ours) & 0.857 & \textbf{0.357} \\
+IF-agg & 0.857 & 0.000 \\
+Granger & 0.429 & 0.000 \\
+MI-graph & 0.429 & --- \\
+Partially-corr & 0.286 & --- \\
+VAR-resid & 0.357 & --- \\
+LOF-agg & 0.000 & 0.000 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\textbf{Case study.} The clearest relational event on the gas pipeline is a
+five-channel attack (labelled $1{+}2{+}4{+}5{+}7$) monitored on the
+setpoint--gain edge. Before the attack the edge carries $\gamma=0.48$
+with direction $\delta=+0.28$. During the attack $\gamma$ holds at $0.50$ while
+$\delta$ reverses to $-0.34$ and $D_{JS}$ peaks at $0.23$: dependency strength
+conserved, direction reversed, conditional mass redistributed. This is an
+inversion in the wild, and it is the exact signature Proposition~\ref{prop:blind}(i)
+predicts. A $\gamma$-only monitor reports nothing here ($\gamma$ is conserved); the
+direction component $\Delta\delta$ carries the detection, $\rho$ drops to
+its floor as the inversion signature, and $D_{JS}$ confirms the reshaping
+post alarm. The full trace is plotted in S.10 and its window-level plane view in
+S.17; all numbers remain recomputable.
+\subsection{Ablation study}\label{sec:ablation}
+
+
+Component ablation on METR-LA (Table~\ref{tab:e3}; a single-channel
+runner distinct from the dual-channel pipeline of Table~\ref{tab:e2}): the detection
+family ($\gamma+\delta$) reaches \eThreeGammaDelta{}, $\gamma$-alone
+\eThreeGamma{}, and $\delta$-alone $0.21$; the separation is sharpest on
+inversions in the capability gate ($0.47$ versus $0.21$ pooled,
+Table~\ref{tab:e0}), exactly where Proposition~\ref{prop:blind} predicts
+the blind spot. $\delta$ alone stays weak everywhere
+(recall $0.21$ on METR-LA, $0.04$ on Beijing-Air, $0.17$ on PEMS-BAY
+across ten seeds), confirming that neither component alone suffices. A single-factor non-copula ablation (the identical pipeline with the whole
+copula standardisation step, $\alpha$-smoothing plus IPF margin
+equalisation, removed from the edge statistics, so the statistics act on
+raw contingency tables; same candidate graph, windows, calibration and
+merging) drops the
+family to $0.12$ and $0.28$ on the traffic networks (from $0.46$ and
+$0.57$) and to $0.19$ on Beijing-Air (from $0.23$). Copula
+standardisation contributes in proportion to marginal occupancy skew,
+with dense 5-minute traffic sensors depending on it heavily and the
+hourly air-quality network only marginally. Because $D_{JS}$ is an attribution rather than a
+detection statistic (\S\ref{sec:quad}), there is no $\gamma{+}D_{JS}$ detection arm to report. A reshape construction (conditional mass redistributed with the modal
+rule pinned) is the regime Proposition~\ref{prop:blind}(ii) describes;
+we do not report a separate empirical suite for it here, and leave the
+validation of the attribution division to the component-level attribution
+already reported.
+\subsection{Parameter sensitivity and efficiency}\label{sec:sens}
+
+Sensitivity (synthetic gate, \eFiveN{} seeds per cell): recall varies between
+$\eFiveLo$ and $\eFiveHi$ across $K\in\{3,4,5\}\times w\in\{128,256\}$ without a
+dominant configuration, and the default $(K{=}4,w{=}128)$ sits within $\eFiveGap$
+of the best cell. The family design, not a lucky hyperparameter, carries
+the result. An effect-size sweep (partial-permutation injections: the
+fraction $p$ of window positions whose pairings are destroyed, $p\in[0.2,0.8]$)
+characterises the detection floor: at the longest events (120 points)
+recall reaches $\eWThreeAHi{}$--$\eWThreeAHiB{}$ under strong injections, whereas at
+the strongest injection the short events reach only $0.20$--$0.45$; at these
+window sizes event length, not injection strength, is the dominant power
+factor.
+
+\begin{table}[t]\centering\small
+\caption{Component ablation (METR-LA, \eTwoNSeeds{} seeds; single-channel runner, distinct from the dual-channel pipeline of Table~\ref{tab:e2}).}
+\label{tab:e3}
+\begin{tabular}{lc}
+\hline
+Encoding & Event recall \\
+\hline
+$\gamma$ only & \eThreeGamma \\
+$\delta$ only & 0.21 \\
+detection family ($\gamma+\delta$) & \eThreeGammaDelta \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[t]\centering\small
+\caption{Pooled recall by injected-event length on the three networks
+(all types; $w{=}128$ points throughout).}
+\label{tab:len}
+\begin{tabular}{lcc}
+\hline
+Network & lengths (points) & recall by length \\
+\hline
+\input{gen/tab_len_body.tex}
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:len} gives the operating envelope directly: on the
+networks events shorter than a quarter of the window ($L\le w/4$,
+30 points on the 5-minute networks) are detected at $0.34$--$0.45$,
+half-window events reach $0.40$--$0.59$, and events comparable to the
+window itself approach $0.61$--$0.67$. Beijing-Air's envelope is lower
+end to end ($0.09$/$0.23$/$0.35$): its hourly sampling packs less
+evidence per window at the same budget. Empirically, recall degrades steeply below half a window here
+($0.34$--$0.45$ at $L\le w/4$ on traffic, $0.09$ on Beijing-Air);
+deployers with shorter events should shrink $w$ and recalibrate.
+
+Efficiency on the gas pipeline (9 channels, 75K points) is \eSevenOurs{}\,s
+per reference--test pass against \eSevenCorr{}\,s for the correlation
+baseline; Figure~\ref{fig:runtime}(b) compares full-pipeline runtimes;
+GDN training dominates all learned baselines in cost. The detector-side cost is dominated by the per-boundary
+family scan of \S\ref{sec:complexity}, $O(E\cdot C\cdot K^{|A_{\max}|}\times K)$ per
+boundary, which the
+dual-channel design keeps small. The block-permutation attribution runs
+only on demand after an alarm.
+
+\textbf{On-device update cost.} To answer whether the rolling dependency-graph
+update is deployable at the edge, the online path of \S\ref{sec:calib} was
+profiled on a Raspberry Pi 4B (4\,~GB, Cortex-A72, NumPy only, single thread),
+using frozen deployment artefacts (quantile bounds, the fixed edge set, and
+the calibration constants of \S\ref{sec:calib}) and three update paths: (A)
+re-digitise the raw window and rebuild all tables, (B) cache the frozen
+digitised blocks and rebuild all tables, and (C) maintain rolling block
+tables incrementally. Over 70 measured fragments (5 rounds $\times$ 500
+windows per configuration and path), the per-window cost of the deployed
+path (C) is
+median $459\,~\mathrm{ms}$ ($\mathrm{p95}~461\,~\mathrm{ms}$) on the 120-edge
+real40 configuration (fitted edges 104--116; workstation scan
+$3.0$--$3.3$\,ms, S.15), about $2.2\,~\mathrm{windows/s}$
+of serial steady-state throughput at a peak RSS of $34.4\,~\mathrm{MB}$. Against the arrival interval
+of new detection windows (one stride of $b=32$ points at 5-minute
+sampling, i.e.\ $\approx 2.7\,~\mathrm{h}$), the margin is four orders of
+magnitude: the update
+mechanism runs comfortably on edge hardware. Two structural readings
+matter. First, the cost is dominated by the per-edge table construction
+loop: across the edge sweep ($E=32,60,112,116,120,343$) path (C) grows
+from $124$ to $1305\,~\mathrm{ms}$, close to linear in $E$. Second, the
+incremental path (C) is $\approx 2.2\times$ \emph{slower} than full rebuild
+(A) in this pure-NumPy implementation: its per-block loop overhead exceeds
+the saved re-digitisation, while caching the digitised blocks (B) saves
+nothing over (A). The rolling table is therefore a memory optimisation
+($30\,\%$ less resident state in the smallest configuration), not a speed
+optimisation, and a C-level implementation of the block update is the
+natural next step if tighter margins are ever needed. One-off deployment
+costs (granulation fit, edge-set construction, calibration) were measured
+on a workstation ($2.3$--$30\,~\mathrm{s}$ across configurations, see the
+repository) and are amortised (scaling to $n{=}2000$: construction
+minutes-scale, boundary scan millisecond-scale, S.15); recalibration
+triggers discussed in
+\S\ref{sec:discussion}.
+
+
+
+\section{Discussion and limitations}\label{sec:discussion}
+
+\textbf{Where Gaussian tools are enough.} On the hourly air-quality network, whose host associations are
+mostly weak regardless of functional form, the
+partial-correlation divergence is nominally the strongest method there
+($0.24$ against the family's $0.23$, not significant), and the $\gamma$-only ablation leads both at $0.29$, a boundary practitioners
+should know. On the near-linear 5-minute networks the same Gaussian
+monitors fall to their floors under the rate budget, and the granular
+machinery earns its complexity there, on non-Gaussian couplings and
+marginal robustness. The full family is
+ahead of its $\gamma$-only ablation nowhere on air quality, a scope limitation worth stating. The division of
+labour is a result, not an embarrassment. A selection guide is tabulated
+in S.16, the theory's guarantee boundary in S.9.
+
+\textbf{Short references.} The gas pipeline's 27-minute reference cannot
+represent a day of operating modes. Thresholds migrate. Our answer is the
+operating curve. A segment-level rolling recalibration prototype that re-runs
+the calibration whenever a test segment completes without an alarm does
+not help. On this log every segment contains attacks, the recalibration
+never engages, and its curve is no better than the static one at low false
+alarm budgets ($\eWFiveRoll{}$ vs.\ $\eWFiveStatic{}$ at $\le 5$ alarms/day).
+Recalibration presupposes quiet stretches that attack-dense logs do not
+offer; hence we report curves rather than recalibrated points.
+
+\textbf{Typing.} The event-aligned typing rule remains the weakest component:
+across the ten-seed injection suites it stays near chance ($0.28$ on
+METR-LA, $0.26$ on PEMS-BAY and $0.30$ on Beijing air quality; chance
+$0.25$--$0.33$). The component-triggered variant of \S\ref{sec:e2} lifts METR-LA
+to $0.49$ (inversion $0.75$), with Beijing-Air at $0.36$.
+Even so, a component that reaches usable accuracy on
+one dataset and not on the others is not yet a typing module. Readers
+should treat the type label as indicative. Component-level attribution
+(which statistic fired, on which edge) is reliable by construction; the
+diagnostic type label stays auxiliary. The
+residual is structured, and the failure chain is documented in the
+repository.
+
+\textbf{What the gate taught us.} Three of the statistical choices in \S\ref{sec:method} (soft $\gamma$, copula standardisation, per-component families) exist because a naive
+assembly of the same ideas measurably failed. A constant artefactual
+dependency of $0.39$ arose from margin occupancy. The discrete rule-map
+component pushed the family maximum to $14$. Most instructively, an earlier
+candidate graph ranked two-thirds noise into its top-``strong'' pairs through
+short-window ranking, so inversion injections landed on independent pairs and
+therefore \emph{looked} detectable by $\gamma$ alone. Cleaning the graph
+definition exposed the true blind spot: with a correct candidate graph, $\gamma$-only inversion recall falls from an
+artefactual $0.54$ to $\eZeroGammaInv$, while the full tuple retains
+$\eZeroRdsInv$. The failure chain is documented in the repository.
+
+\section{Conclusion}\label{sec:conclusion}
+
+We turned the rough-set dependency degree into a monitored object: a
+dependency graph whose edges carry a four-tuple of copula-standardised
+granular statistics, maintained through a dual-channel candidate graph. Its
+calibration machinery makes the alarms falsifiable. Block-permuted nulls, a
+self-scanned false-alarm budget (SBC), component families, and edge-attributed
+events all ship with the monitor. The detector is
+blind by design to what marginals say and sensitive only to the
+dependence structure they leave unsaid. The
+experiments show the consequences of that asymmetry on synthetic gates,
+the three real networks, and two labelled ICS logs. Future work targets three directions. First, rolling recalibration
+for long deployments whose quiet stretches let the reference segment
+track operating modes; the attack-dense regime of \S\ref{sec:discussion}
+is precisely where this fails today. Second, extending subset edges to
+higher-order interactions beyond pairs. Third, integrating the typed
+alarm labels with operator decision support, so a \emph{breakdown} can
+trigger a different inspection than an \emph{emergence} once typing
+reliability is established.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

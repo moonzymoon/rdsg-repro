@@ -1,0 +1,46 @@
+{
+ "singles": {
+  "rdsg": {
+   "recall": 0.038,
+   "n": 2
+  },
+  "b1_corr": {
+   "recall": 0.057,
+   "n": 3
+  },
+  "b5b_pcorr": {
+   "recall": 0.038,
+   "n": 2
+  },
+  "b2_granger": {
+   "recall": 0.019,
+   "n": 1
+  },
+  "b4_if": {
+   "recall": 0.0,
+   "n": 0
+  },
+  "b4_lof": {
+   "recall": 0.245,
+   "n": 13
+  }
+ },
+ "unions": {
+  "rdsg+b5b_pcorr": {
+   "recall": 0.075,
+   "n": 4
+  },
+  "rdsg+b4_lof": {
+   "recall": 0.264,
+   "n": 14
+  },
+  "rdsg+b4_lof+b4_if": {
+   "recall": 0.264,
+   "n": 14
+  },
+  "rdsg+b5b_pcorr+b4_lof": {
+   "recall": 0.302,
+   "n": 16
+  }
+ }
+}

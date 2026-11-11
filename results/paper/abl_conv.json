@@ -1,0 +1,175 @@
+{
+ "config": {
+  "audit": "convergence",
+  "max_epochs": 300,
+  "patience": 30
+ },
+ "metr_la": {
+  "at_long": {
+   "1": {
+    "recall": 0.25,
+    "fa_per_day": 0.08,
+    "stop_epoch": 300
+   },
+   "2": {
+    "recall": 0.1111111111111111,
+    "fa_per_day": 0.064,
+    "stop_epoch": 300
+   },
+   "3": {
+    "recall": 0.125,
+    "fa_per_day": 0.016,
+    "stop_epoch": 300
+   },
+   "4": {
+    "recall": 0.125,
+    "fa_per_day": 0.08,
+    "stop_epoch": 300
+   },
+   "5": {
+    "recall": 0.037037037037037035,
+    "fa_per_day": 0.048,
+    "stop_epoch": 300
+   }
+  },
+  "tranad_long": {
+   "1": {
+    "recall": 0.125,
+    "fa_per_day": 0.016,
+    "stop_epoch": 300
+   },
+   "2": {
+    "recall": 0.1111111111111111,
+    "fa_per_day": 0.016,
+    "stop_epoch": 300
+   },
+   "3": {
+    "recall": 0.08333333333333333,
+    "fa_per_day": 0.032,
+    "stop_epoch": 300
+   },
+   "4": {
+    "recall": 0.125,
+    "fa_per_day": 0.016,
+    "stop_epoch": 300
+   },
+   "5": {
+    "recall": 0.1111111111111111,
+    "fa_per_day": 0.032,
+    "stop_epoch": 300
+   }
+  }
+ },
+ "pems_bay": {
+  "at_long": {
+   "1": {
+    "recall": 0.16,
+    "fa_per_day": 0.096,
+    "stop_epoch": 300
+   },
+   "2": {
+    "recall": 0.18518518518518517,
+    "fa_per_day": 0.064,
+    "stop_epoch": 300
+   },
+   "3": {
+    "recall": 0.2,
+    "fa_per_day": 0.064,
+    "stop_epoch": 300
+   },
+   "4": {
+    "recall": 0.25,
+    "fa_per_day": 0.032,
+    "stop_epoch": 300
+   },
+   "5": {
+    "recall": 0.14285714285714285,
+    "fa_per_day": 0.048,
+    "stop_epoch": 300
+   }
+  },
+  "tranad_long": {
+   "1": {
+    "recall": 0.2,
+    "fa_per_day": 0.016,
+    "stop_epoch": 300
+   },
+   "2": {
+    "recall": 0.07407407407407407,
+    "fa_per_day": 0.064,
+    "stop_epoch": 300
+   },
+   "3": {
+    "recall": 0.08,
+    "fa_per_day": 0.064,
+    "stop_epoch": 300
+   },
+   "4": {
+    "recall": 0.20833333333333334,
+    "fa_per_day": 0.016,
+    "stop_epoch": 300
+   },
+   "5": {
+    "recall": 0.10714285714285714,
+    "fa_per_day": 0.048,
+    "stop_epoch": 300
+   }
+  }
+ },
+ "beijing_air": {
+  "at_long": {
+   "1": {
+    "recall": 0.05555555555555555,
+    "fa_per_day": 0.0,
+    "stop_epoch": 300
+   },
+   "2": {
+    "recall": 0.05263157894736842,
+    "fa_per_day": 0.0,
+    "stop_epoch": 300
+   },
+   "3": {
+    "recall": 0.041666666666666664,
+    "fa_per_day": 0.0,
+    "stop_epoch": 300
+   },
+   "4": {
+    "recall": 0.045454545454545456,
+    "fa_per_day": 0.0,
+    "stop_epoch": 300
+   },
+   "5": {
+    "recall": 0.047619047619047616,
+    "fa_per_day": 0.0,
+    "stop_epoch": 300
+   }
+  },
+  "tranad_long": {
+   "1": {
+    "recall": 0.2222222222222222,
+    "fa_per_day": 0.004347826086956522,
+    "stop_epoch": 300
+   },
+   "2": {
+    "recall": 0.21052631578947367,
+    "fa_per_day": 0.004347826086956522,
+    "stop_epoch": 300
+   },
+   "3": {
+    "recall": 0.16666666666666666,
+    "fa_per_day": 0.004347826086956522,
+    "stop_epoch": 300
+   },
+   "4": {
+    "recall": 0.22727272727272727,
+    "fa_per_day": 0.0,
+    "stop_epoch": 300
+   },
+   "5": {
+    "recall": 0.14285714285714285,
+    "fa_per_day": 0.008695652173913044,
+    "stop_epoch": 300
+   }
+  }
+ }
+}

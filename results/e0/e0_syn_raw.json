@@ -1,0 +1,778 @@
+{
+ "rdsg": {
+  "1": {
+   "recall": 0.14285714285714285,
+   "n_true": 7,
+   "n_pred": 2,
+   "fa_per_day": 0.18,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.14075695964967155,
+   "recall_by_type": {
+    "inv": 0.3333333333333333,
+    "brk": 0.5,
+    "emb": 0.5
+   },
+   "per_event": [
+    [
+     829,
+     60,
+     "brk",
+     true
+    ],
+    [
+     2018,
+     120,
+     "emb",
+     false
+    ],
+    [
+     3083,
+     30,
+     "emb",
+     false
+    ],
+    [
+     3928,
+     120,
+     "inv",
+     false
+    ],
+    [
+     5396,
+     120,
+     "inv",
+     false
+    ],
+    [
+     6276,
+     60,
+     "brk",
+     false
+    ],
+    [
+     7114,
+     60,
+     "inv",
+     false
+    ]
+   ]
+  },
+  "2": {
+   "recall": 0.4,
+   "n_true": 5,
+   "n_pred": 11,
+   "fa_per_day": 1.62,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.1471790678659035,
+   "recall_by_type": {
+    "inv": 1.0,
+    "brk": 0.0,
+    "emb": 0.5
+   },
+   "per_event": [
+    [
+     1394,
+     120,
+     "brk",
+     false
+    ],
+    [
+     2761,
+     120,
+     "inv",
+     true
+    ],
+    [
+     4042,
+     60,
+     "brk",
+     false
+    ],
+    [
+     5195,
+     120,
+     "emb",
+     true
+    ],
+    [
+     6475,
+     120,
+     "emb",
+     false
+    ]
+   ]
+  },
+  "3": {
+   "recall": 0.42857142857142855,
+   "n_true": 7,
+   "n_pred": 9,
+   "fa_per_day": 1.08,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.1597603594608088,
+   "recall_by_type": {
+    "inv": 1.0,
+    "brk": 0.5,
+    "emb": 0.5
+   },
+   "per_event": [
+    [
+     709,
+     120,
+     "emb",
+     true
+    ],
+    [
+     1602,
+     120,
+     "emb",
+     false
+    ],
+    [
+     2596,
+     120,
+     "emb",
+     false
+    ],
+    [
+     3796,
+     30,
+     "brk",
+     false
+    ],
+    [
+     5253,
+     60,
+     "emb",
+     true
+    ],
+    [
+     6152,
+     30,
+     "brk",
+     false
+    ],
+    [
+     7095,
+     30,
+     "inv",
+     true
+    ]
+   ]
+  },
+  "4": {
+   "recall": 0.42857142857142855,
+   "n_true": 7,
+   "n_pred": 7,
+   "fa_per_day": 0.72,
+   "delay_med": 0.0,
+   "type_acc": 0.6666666666666666,
+   "pa_f1": 0.12541057031949834,
+   "recall_by_type": {
+    "inv": 0.75,
+    "brk": 0.0,
+    "emb": 0.5
+   },
+   "per_event": [
+    [
+     727,
+     120,
+     "emb",
+     true
+    ],
+    [
+     1576,
+     30,
+     "inv",
+     false
+    ],
+    [
+     2687,
+     60,
+     "emb",
+     false
+    ],
+    [
+     3748,
+     30,
+     "brk",
+     false
+    ],
+    [
+     5073,
+     30,
+     "inv",
+     true
+    ],
+    [
+     5996,
+     60,
+     "inv",
+     false
+    ],
+    [
+     6809,
+     120,
+     "inv",
+     true
+    ]
+   ]
+  },
+  "5": {
+   "recall": 0.42857142857142855,
+   "n_true": 7,
+   "n_pred": 7,
+   "fa_per_day": 0.72,
+   "delay_med": 0.0,
+   "type_acc": 0.3333333333333333,
+   "pa_f1": 0.08098727342846124,
+   "recall_by_type": {
+    "inv": 0.3333333333333333,
+    "brk": 0.5,
+    "emb": 0.5
+   },
+   "per_event": [
+    [
+     1121,
+     30,
+     "inv",
+     false
+    ],
+    [
+     2459,
+     120,
+     "brk",
+     false
+    ],
+    [
+     3288,
+     120,
+     "emb",
+     true
+    ],
+    [
+     4277,
+     30,
+     "emb",
+     false
+    ],
+    [
+     5141,
+     60,
+     "inv",
+     false
+    ],
+    [
+     6452,
+     60,
+     "inv",
+     true
+    ],
+    [
+     7215,
+     30,
+     "brk",
+     true
+    ]
+   ]
+  }
+ },
+ "gamma_only": {
+  "1": {
+   "recall": 0.14285714285714285,
+   "n_true": 7,
+   "n_pred": 1,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 1.0,
+   "pa_f1": 0.15107341637953883,
+   "recall_by_type": {
+    "inv": 0.3333333333333333,
+    "brk": 0.5,
+    "emb": 0.5
+   },
+   "per_event": [
+    [
+     829,
+     60,
+     "brk",
+     true
+    ],
+    [
+     2018,
+     120,
+     "emb",
+     false
+    ],
+    [
+     3083,
+     30,
+     "emb",
+     false
+    ],
+    [
+     3928,
+     120,
+     "inv",
+     false
+    ],
+    [
+     5396,
+     120,
+     "inv",
+     false
+    ],
+    [
+     6276,
+     60,
+     "brk",
+     false
+    ],
+    [
+     7114,
+     60,
+     "inv",
+     false
+    ]
+   ]
+  },
+  "2": {
+   "recall": 0.8,
+   "n_true": 5,
+   "n_pred": 9,
+   "fa_per_day": 0.9,
+   "delay_med": 0.0,
+   "type_acc": 0.25,
+   "pa_f1": 0.18060200668896317,
+   "recall_by_type": {
+    "inv": 1.0,
+    "brk": 1.0,
+    "emb": 0.5
+   },
+   "per_event": [
+    [
+     1394,
+     120,
+     "brk",
+     true
+    ],
+    [
+     2761,
+     120,
+     "inv",
+     true
+    ],
+    [
+     4042,
+     60,
+     "brk",
+     true
+    ],
+    [
+     5195,
+     120,
+     "emb",
+     true
+    ],
+    [
+     6475,
+     120,
+     "emb",
+     false
+    ]
+   ]
+  },
+  "3": {
+   "recall": 0.2857142857142857,
+   "n_true": 7,
+   "n_pred": 2,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.5,
+   "pa_f1": 0.13396375098502758,
+   "recall_by_type": {
+    "inv": 1.0,
+    "brk": 0.5,
+    "emb": 0.25
+   },
+   "per_event": [
+    [
+     709,
+     120,
+     "emb",
+     true
+    ],
+    [
+     1602,
+     120,
+     "emb",
+     false
+    ],
+    [
+     2596,
+     120,
+     "emb",
+     false
+    ],
+    [
+     3796,
+     30,
+     "brk",
+     false
+    ],
+    [
+     5253,
+     60,
+     "emb",
+     false
+    ],
+    [
+     6152,
+     30,
+     "brk",
+     false
+    ],
+    [
+     7095,
+     30,
+     "inv",
+     true
+    ]
+   ]
+  },
+  "4": {
+   "recall": 0.14285714285714285,
+   "n_true": 7,
+   "n_pred": 3,
+   "fa_per_day": 0.36,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.11715699036709191,
+   "recall_by_type": {
+    "inv": 0.25,
+    "brk": 1.0,
+    "emb": 0.5
+   },
+   "per_event": [
+    [
+     727,
+     120,
+     "emb",
+     true
+    ],
+    [
+     1576,
+     30,
+     "inv",
+     false
+    ],
+    [
+     2687,
+     60,
+     "emb",
+     false
+    ],
+    [
+     3748,
+     30,
+     "brk",
+     false
+    ],
+    [
+     5073,
+     30,
+     "inv",
+     false
+    ],
+    [
+     5996,
+     60,
+     "inv",
+     false
+    ],
+    [
+     6809,
+     120,
+     "inv",
+     false
+    ]
+   ]
+  },
+  "5": {
+   "recall": 0.14285714285714285,
+   "n_true": 7,
+   "n_pred": 1,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.11523687580025607,
+   "recall_by_type": {
+    "inv": 0.3333333333333333,
+    "brk": 0.5,
+    "emb": 0.5
+   },
+   "per_event": [
+    [
+     1121,
+     30,
+     "inv",
+     true
+    ],
+    [
+     2459,
+     120,
+     "brk",
+     false
+    ],
+    [
+     3288,
+     120,
+     "emb",
+     false
+    ],
+    [
+     4277,
+     30,
+     "emb",
+     false
+    ],
+    [
+     5141,
+     60,
+     "inv",
+     false
+    ],
+    [
+     6452,
+     60,
+     "inv",
+     false
+    ],
+    [
+     7215,
+     30,
+     "brk",
+     false
+    ]
+   ]
+  }
+ },
+ "b4_if": {
+  "1": {
+   "recall": 0.14285714285714285,
+   "n_true": 7,
+   "n_pred": 19,
+   "fa_per_day": 3.24,
+   "delay_med": 18.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.045180722891566265,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.5
+   }
+  },
+  "2": {
+   "recall": 0.8,
+   "n_true": 5,
+   "n_pred": 24,
+   "fa_per_day": 3.6,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.3878116343490305,
+   "recall_by_type": {
+    "inv": 1.0,
+    "brk": 1.0,
+    "emb": 0.5
+   }
+  },
+  "3": {
+   "recall": 0.2857142857142857,
+   "n_true": 7,
+   "n_pred": 21,
+   "fa_per_day": 3.42,
+   "delay_med": 46.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.41739130434782606,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.5
+   }
+  },
+  "4": {
+   "recall": 0.2857142857142857,
+   "n_true": 7,
+   "n_pred": 24,
+   "fa_per_day": 3.96,
+   "delay_med": 63.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.26460859977949286,
+   "recall_by_type": {
+    "inv": 0.25,
+    "brk": 0.0,
+    "emb": 0.5
+   }
+  },
+  "5": {
+   "recall": 0.42857142857142855,
+   "n_true": 7,
+   "n_pred": 20,
+   "fa_per_day": 3.06,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.21420071400237997,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.5,
+    "emb": 1.0
+   }
+  }
+ },
+ "b4_lof": {
+  "1": {
+   "recall": 0.0,
+   "n_true": 7,
+   "n_pred": 16,
+   "fa_per_day": 2.88,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0
+   }
+  },
+  "2": {
+   "recall": 0.4,
+   "n_true": 5,
+   "n_pred": 10,
+   "fa_per_day": 1.44,
+   "delay_med": 78.5,
+   "type_acc": 0.0,
+   "pa_f1": 0.32757051865332115,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 1.0,
+    "emb": 0.0
+   }
+  },
+  "3": {
+   "recall": 0.42857142857142855,
+   "n_true": 7,
+   "n_pred": 12,
+   "fa_per_day": 1.62,
+   "delay_med": 23.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.437956204379562,
+   "recall_by_type": {
+    "inv": 1.0,
+    "brk": 0.0,
+    "emb": 0.5
+   }
+  },
+  "4": {
+   "recall": 0.0,
+   "n_true": 7,
+   "n_pred": 14,
+   "fa_per_day": 2.52,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0
+   }
+  },
+  "5": {
+   "recall": 0.14285714285714285,
+   "n_true": 7,
+   "n_pred": 9,
+   "fa_per_day": 1.44,
+   "delay_med": 22.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.08862629246676512,
+   "recall_by_type": {
+    "inv": 0.3333333333333333,
+    "brk": 0.0,
+    "emb": 0.0
+   }
+  }
+ },
+ "b5a_mi": {
+  "1": {
+   "recall": 0.0,
+   "n_true": 7,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0
+   }
+  },
+  "2": {
+   "recall": 0.0,
+   "n_true": 5,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0
+   }
+  },
+  "3": {
+   "recall": 0.0,
+   "n_true": 7,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0
+   }
+  },
+  "4": {
+   "recall": 0.0,
+   "n_true": 7,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0
+   }
+  },
+  "5": {
+   "recall": 0.0,
+   "n_true": 7,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0
+   }
+  }
+ }
+}

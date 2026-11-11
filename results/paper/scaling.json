@@ -1,0 +1,54 @@
+{
+ "rows": [
+  {
+   "n": 40,
+   "label": "METR-LA(207)",
+   "t_pair_rank_s": 0.09,
+   "t_fit_s": 0.08,
+   "t_boundary_ms": 3.0,
+   "rss_peak_mb": 170.0,
+   "E_measured": 116,
+   "E_total": 129
+  },
+  {
+   "n": 40,
+   "label": "PEMS-BAY(325)",
+   "t_pair_rank_s": 0.11,
+   "t_fit_s": 0.07,
+   "t_boundary_ms": 3.3,
+   "rss_peak_mb": 171.0,
+   "E_measured": 116,
+   "E_total": 116
+  },
+  {
+   "n": 500,
+   "label": "synth(500)",
+   "t_pair_rank_s": 15.23,
+   "t_fit_s": 6.8,
+   "t_boundary_ms": 1.4,
+   "rss_peak_mb": 260.0,
+   "E_measured": 104,
+   "E_total": 104
+  },
+  {
+   "n": 1000,
+   "label": "synth(1000)",
+   "t_pair_rank_s": 44.91,
+   "t_fit_s": 67.57,
+   "t_boundary_ms": 5.4,
+   "rss_peak_mb": 444.0,
+   "E_measured": 105,
+   "E_total": 105
+  },
+  {
+   "n": 2000,
+   "label": "synth(2000)",
+   "t_pair_rank_s": 232.57,
+   "t_fit_s": 133.3,
+   "t_boundary_ms": 2.1,
+   "rss_peak_mb": 1056.0,
+   "E_measured": 105,
+   "E_total": 105
+  }
+ ]
+}

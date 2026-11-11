@@ -1,0 +1,206 @@
+{
+ "metr_la": {
+  "1": {
+   "cusum": {
+    "recall": 0.041666666666666664,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "2": {
+   "cusum": {
+    "recall": 0.05263157894736842,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "3": {
+   "cusum": {
+    "recall": 0.047619047619047616,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "4": {
+   "cusum": {
+    "recall": 0.045454545454545456,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "5": {
+   "cusum": {
+    "recall": 0.05,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "6": {
+   "cusum": {
+    "recall": 0.047619047619047616,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "7": {
+   "cusum": {
+    "recall": 0.05,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "8": {
+   "cusum": {
+    "recall": 0.043478260869565216,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "9": {
+   "cusum": {
+    "recall": 0.047619047619047616,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "10": {
+   "cusum": {
+    "recall": 0.043478260869565216,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  }
+ },
+ "pems_bay": {
+  "1": {
+   "cusum": {
+    "recall": 0.041666666666666664,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "2": {
+   "cusum": {
+    "recall": 0.05263157894736842,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "3": {
+   "cusum": {
+    "recall": 0.047619047619047616,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "4": {
+   "cusum": {
+    "recall": 0.045454545454545456,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "5": {
+   "cusum": {
+    "recall": 0.05,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "6": {
+   "cusum": {
+    "recall": 0.047619047619047616,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "7": {
+   "cusum": {
+    "recall": 0.05,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "8": {
+   "cusum": {
+    "recall": 0.043478260869565216,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "9": {
+   "cusum": {
+    "recall": 0.047619047619047616,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  },
+  "10": {
+   "cusum": {
+    "recall": 0.043478260869565216,
+    "fa_per_day": 0.0
+   },
+   "dcor": {
+    "recall": 0.0,
+    "fa_per_day": 0.0
+   }
+  }
+ }
+}

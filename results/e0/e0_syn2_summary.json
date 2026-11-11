@@ -1,0 +1,95 @@
+{
+ "summary": {
+  "rdsg": {
+   "recall_mean": 0.4743149540517962,
+   "fa_per_day_mean": 0.48,
+   "recall_by_type": {
+    "inv": 0.4685714285714285,
+    "brk": 0.36500000000000005,
+    "emb": 0.551984126984127
+   },
+   "delay_med": 0.0,
+   "type_acc": 0.190515873015873,
+   "pa_f1": 0.3229346088114494
+  },
+  "gamma_only": {
+   "recall_mean": 0.3557560568086884,
+   "fa_per_day_mean": 0.592,
+   "recall_by_type": {
+    "inv": 0.20773809523809525,
+    "brk": 0.27666666666666667,
+    "emb": 0.5390873015873016
+   },
+   "delay_med": 0.0,
+   "type_acc": 0.22956349206349208,
+   "pa_f1": 0.2520733466703756
+  },
+  "b4_if": {
+   "recall_mean": 0.010263157894736842,
+   "fa_per_day_mean": 0.192,
+   "recall_by_type": {
+    "inv": 0.0125,
+    "brk": 0.0,
+    "emb": 0.0125
+   },
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.018462953493682203
+  },
+  "b4_lof": {
+   "recall_mean": 0.037218045112781956,
+   "fa_per_day_mean": 0.192,
+   "recall_by_type": {
+    "inv": 0.016666666666666666,
+    "brk": 0.045,
+    "emb": 0.047619047619047616
+   },
+   "delay_med": 15.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.07897667241706316
+  },
+  "b5a_mi": {
+   "recall_mean": 0.05774436090225564,
+   "fa_per_day_mean": 0.16,
+   "recall_by_type": {
+    "inv": 0.06166666666666667,
+    "brk": 0.06000000000000001,
+    "emb": 0.06468253968253967
+   },
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.0914795391814737
+  }
+ },
+ "verdict": {
+  "gate_recall_by_type": false,
+  "gate_fa": true,
+  "gate_wilcoxon": true,
+  "wilcoxon_p": 0.001953125,
+  "PASS": false
+ },
+ "config": {
+  "REF_LEN": 12000,
+  "TEST_LEN": 18000,
+  "KS": [
+   4,
+   2
+  ],
+  "WS": [
+   128,
+   64,
+   32
+  ],
+  "BLK": 64,
+  "B": 499,
+  "N_EACH": 10,
+  "MARGIN": 600,
+  "PAIR_STRATA": [
+   16,
+   24
+  ],
+  "FA_TARGET": 0.25,
+  "CAL_END": 6000,
+  "SPP": 60.0
+ }
+}

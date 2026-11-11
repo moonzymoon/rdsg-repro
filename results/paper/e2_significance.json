@@ -1,0 +1,29 @@
+{
+ "metr_la": {
+  "n_seeds": 10,
+  "strongest_baseline": "abl_at",
+  "ours_mean": 0.4556,
+  "strongest_mean": 0.1873,
+  "p_vs_strongest": 0.0029285495426420644,
+  "p_vs_gamma_only": 0.009413029335118329,
+  "gamma_mean": 0.3471
+ },
+ "beijing_air": {
+  "n_seeds": 10,
+  "strongest_baseline": "b5b_pcorr",
+  "ours_mean": 0.2274,
+  "strongest_mean": 0.2402,
+  "p_vs_strongest": 0.6770906491611375,
+  "p_vs_gamma_only": 0.9905482284944394,
+  "gamma_mean": 0.29
+ },
+ "pems_bay": {
+  "n_seeds": 10,
+  "strongest_baseline": "b4_lof",
+  "ours_mean": 0.575,
+  "strongest_mean": 0.4885,
+  "p_vs_strongest": 0.0068359375,
+  "p_vs_gamma_only": 0.0038203974123549914,
+  "gamma_mean": 0.4917
+ }
+}

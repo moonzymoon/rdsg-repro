@@ -1,0 +1,90 @@
+{
+ "summary": {
+  "rdsg": {
+   "recall_mean": 0.36571428571428577,
+   "fa_per_day_mean": 0.8639999999999999,
+   "recall_by_type": {
+    "inv": 0.6833333333333333,
+    "brk": 0.3,
+    "emb": 0.5
+   },
+   "delay_med": 0.0,
+   "type_acc": 0.2,
+   "pa_f1": 0.1308188461448687
+  },
+  "gamma_only": {
+   "recall_mean": 0.3028571428571428,
+   "fa_per_day_mean": 0.252,
+   "recall_by_type": {
+    "inv": 0.5833333333333333,
+    "brk": 0.7,
+    "emb": 0.45
+   },
+   "delay_med": 0.0,
+   "type_acc": 0.35,
+   "pa_f1": 0.13960660804417552
+  },
+  "b4_if": {
+   "recall_mean": 0.38857142857142857,
+   "fa_per_day_mean": 3.4559999999999995,
+   "recall_by_type": {
+    "inv": 0.25,
+    "brk": 0.3,
+    "emb": 0.6
+   },
+   "delay_med": 18.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.26583859507405916
+  },
+  "b4_lof": {
+   "recall_mean": 0.19428571428571426,
+   "fa_per_day_mean": 1.98,
+   "recall_by_type": {
+    "inv": 0.26666666666666666,
+    "brk": 0.2,
+    "emb": 0.1
+   },
+   "delay_med": 23.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.17083060309992965
+  },
+  "b5a_mi": {
+   "recall_mean": 0.0,
+   "fa_per_day_mean": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0
+   },
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0
+  }
+ },
+ "verdict": {
+  "gate_recall_by_type": false,
+  "gate_fa": true,
+  "gate_wilcoxon": false,
+  "wilcoxon_p": 1.0,
+  "PASS": false
+ },
+ "config": {
+  "N_CHANNELS": 12,
+  "REF_LEN": 12000,
+  "TEST_LEN": 8000,
+  "KS": [
+   4,
+   2
+  ],
+  "WS": [
+   512,
+   128
+  ],
+  "BLK": 64,
+  "B": 499,
+  "N_EACH": 10,
+  "MARGIN": 700,
+  "CAL_SPAN": 8000,
+  "SPP": 60.0
+ }
+}

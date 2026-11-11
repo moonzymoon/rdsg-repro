@@ -1,0 +1,40 @@
+
+===== metr_la (34000, 40) spp=300.0 =====
+  [metr_la s1] R=0.167 fa/d=0.26 (56s)
+  [metr_la s2] R=0.185 fa/d=0.21 (56s)
+  [metr_la s3] R=0.167 fa/d=0.19 (56s)
+  [metr_la s4] R=0.083 fa/d=0.22 (54s)
+  [metr_la s5] R=0.111 fa/d=0.21 (56s)
+  [metr_la s6] R=0.120 fa/d=0.21 (54s)
+  [metr_la s7] R=0.160 fa/d=0.16 (53s)
+  [metr_la s8] R=0.083 fa/d=0.21 (49s)
+  [metr_la s9] R=0.080 fa/d=0.19 (47s)
+  [metr_la s10] R=0.074 fa/d=0.19 (48s)
+  [metr_la] mean=0.123 +/- 0.041 range=[0.074,0.185]
+
+===== pems_bay (40000, 40) spp=300.0 =====
+  [pems_bay s1] R=0.240 fa/d=0.32 (46s)
+  [pems_bay s2] R=0.370 fa/d=0.26 (46s)
+  [pems_bay s3] R=0.280 fa/d=0.30 (47s)
+  [pems_bay s4] R=0.208 fa/d=0.34 (46s)
+  [pems_bay s5] R=0.286 fa/d=0.29 (47s)
+  [pems_bay s6] R=0.222 fa/d=0.32 (47s)
+  [pems_bay s7] R=0.417 fa/d=0.29 (45s)
+  [pems_bay s8] R=0.208 fa/d=0.34 (43s)
+  [pems_bay s9] R=0.222 fa/d=0.32 (43s)
+  [pems_bay s10] R=0.360 fa/d=0.24 (42s)
+  [pems_bay] mean=0.281 +/- 0.072 range=[0.208,0.417]
+
+===== beijing_air (17520, 32) spp=3600.0 =====
+  [beijing_air s1] R=0.278 fa/d=0.02 (40s)
+  [beijing_air s2] R=0.211 fa/d=0.02 (38s)
+  [beijing_air s3] R=0.125 fa/d=0.01 (39s)
+  [beijing_air s4] R=0.227 fa/d=0.02 (40s)
+  [beijing_air s5] R=0.143 fa/d=0.01 (39s)
+  [beijing_air s6] R=0.160 fa/d=0.02 (39s)
+  [beijing_air s7] R=0.250 fa/d=0.01 (39s)
+  [beijing_air s8] R=0.143 fa/d=0.01 (39s)
+  [beijing_air s9] R=0.150 fa/d=0.01 (39s)
+  [beijing_air s10] R=0.222 fa/d=0.02 (42s)
+  [beijing_air] mean=0.191 +/- 0.050 range=[0.125,0.278]
+saved <repo>/abl_nocopula.json

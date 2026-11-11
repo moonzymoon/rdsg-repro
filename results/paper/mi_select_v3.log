@@ -1,0 +1,36 @@
+[metr_la s1] MI-sel R=0.24 gamma-sel R=0.29 (82s)
+[metr_la s2] MI-sel R=0.11 gamma-sel R=0.11 (78s)
+[metr_la s3] MI-sel R=0.21 gamma-sel R=0.21 (50s)
+[metr_la s4] MI-sel R=0.05 gamma-sel R=0.16 (53s)
+[metr_la s5] MI-sel R=0.11 gamma-sel R=0.26 (53s)
+[metr_la s6] MI-sel R=0.16 gamma-sel R=0.32 (85s)
+[metr_la s7] MI-sel R=0.25 gamma-sel R=0.20 (90s)
+[metr_la s8] MI-sel R=0.00 gamma-sel R=0.10 (60s)
+[metr_la s9] MI-sel R=0.21 gamma-sel R=0.21 (51s)
+[metr_la s10] MI-sel R=0.19 gamma-sel R=0.24 (60s)
+[pems_bay s1] MI-sel R=0.24 gamma-sel R=0.29 (42s)
+[pems_bay s2] MI-sel R=0.33 gamma-sel R=0.28 (41s)
+[pems_bay s3] MI-sel R=0.32 gamma-sel R=0.16 (42s)
+[pems_bay s4] MI-sel R=0.42 gamma-sel R=0.32 (42s)
+[pems_bay s5] MI-sel R=0.26 gamma-sel R=0.21 (40s)
+[pems_bay s6] MI-sel R=0.26 gamma-sel R=0.11 (41s)
+[pems_bay s7] MI-sel R=0.30 gamma-sel R=0.35 (43s)
+[pems_bay s8] MI-sel R=0.38 gamma-sel R=0.33 (44s)
+[pems_bay s9] MI-sel R=0.16 gamma-sel R=0.21 (44s)
+[pems_bay s10] MI-sel R=0.29 gamma-sel R=0.29 (44s)
+[beijing_air s1] MI-sel R=0.44 gamma-sel R=0.44 (50s)
+[beijing_air s2] MI-sel R=0.30 gamma-sel R=0.30 (61s)
+[beijing_air s3] MI-sel R=0.20 gamma-sel R=0.40 (48s)
+[beijing_air s4] MI-sel R=0.30 gamma-sel R=0.40 (49s)
+[beijing_air s5] MI-sel R=0.30 gamma-sel R=0.30 (47s)
+[beijing_air s6] MI-sel R=0.50 gamma-sel R=0.50 (48s)
+[beijing_air s7] MI-sel R=0.36 gamma-sel R=0.36 (49s)
+[beijing_air s8] MI-sel R=0.56 gamma-sel R=0.56 (47s)
+[beijing_air s9] MI-sel R=0.27 gamma-sel R=0.27 (48s)
+[beijing_air s10] MI-sel R=0.33 gamma-sel R=0.44 (48s)
+
+=== MI-select ablation summary ===
+  metr_la      MI-select: recall=0.153±0.079
+  pems_bay     MI-select: recall=0.296±0.070
+  beijing_air  MI-select: recall=0.357±0.105
+

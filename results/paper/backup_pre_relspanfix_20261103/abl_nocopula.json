@@ -1,0 +1,457 @@
+{
+ "metr_la": {
+  "1": {
+   "recall": 0.0,
+   "n_true": 24,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "2": {
+   "recall": 0.0,
+   "n_true": 27,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "3": {
+   "recall": 0.0,
+   "n_true": 24,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "4": {
+   "recall": 0.0,
+   "n_true": 24,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "5": {
+   "recall": 0.0,
+   "n_true": 27,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "6": {
+   "recall": 0.0,
+   "n_true": 25,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "7": {
+   "recall": 0.0,
+   "n_true": 25,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "8": {
+   "recall": 0.0,
+   "n_true": 24,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "9": {
+   "recall": 0.0,
+   "n_true": 25,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "10": {
+   "recall": 0.0,
+   "n_true": 27,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  }
+ },
+ "pems_bay": {
+  "1": {
+   "recall": 0.0,
+   "n_true": 25,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "2": {
+   "recall": 0.0,
+   "n_true": 27,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "3": {
+   "recall": 0.0,
+   "n_true": 25,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "4": {
+   "recall": 0.0,
+   "n_true": 24,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "5": {
+   "recall": 0.0,
+   "n_true": 28,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "6": {
+   "recall": 0.0,
+   "n_true": 27,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "7": {
+   "recall": 0.0,
+   "n_true": 24,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0
+   }
+  },
+  "8": {
+   "recall": 0.0,
+   "n_true": 24,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "9": {
+   "recall": 0.0,
+   "n_true": 27,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  },
+  "10": {
+   "recall": 0.0,
+   "n_true": 25,
+   "n_pred": 0,
+   "fa_per_day": 0.0,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": 0.0,
+    "brk": 0.0,
+    "emb": 0.0,
+    "emb2": 0.0
+   }
+  }
+ },
+ "beijing_air": {
+  "1": {
+   "recall": 0.2222222222222222,
+   "n_true": 18,
+   "n_pred": 5,
+   "fa_per_day": 0.004347826086956522,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.19298637480455666,
+   "recall_by_type": {
+    "inv": 0.3333333333333333,
+    "brk": 0.5,
+    "emb": 0.5714285714285714,
+    "emb2": 1.0
+   }
+  },
+  "2": {
+   "recall": 0.42105263157894735,
+   "n_true": 19,
+   "n_pred": 9,
+   "fa_per_day": 0.004347826086956522,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.2098843322818086,
+   "recall_by_type": {
+    "inv": 0.5,
+    "brk": 0.8333333333333334,
+    "emb": 0.5714285714285714,
+    "emb2": 1.0
+   }
+  },
+  "3": {
+   "recall": 0.25,
+   "n_true": 24,
+   "n_pred": 7,
+   "fa_per_day": 0.004347826086956522,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.21261337270618014,
+   "recall_by_type": {
+    "inv": 0.7142857142857143,
+    "brk": 0.6,
+    "emb": 0.5,
+    "emb2": 0.5
+   }
+  },
+  "4": {
+   "recall": 0.2727272727272727,
+   "n_true": 22,
+   "n_pred": 7,
+   "fa_per_day": 0.004347826086956522,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.22593068035943514,
+   "recall_by_type": {
+    "inv": 0.625,
+    "brk": 0.5,
+    "emb": 0.42857142857142855,
+    "emb2": 0.6666666666666666
+   }
+  },
+  "5": {
+   "recall": 0.2857142857142857,
+   "n_true": 21,
+   "n_pred": 6,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.2362508024823454,
+   "recall_by_type": {
+    "inv": 0.5714285714285714,
+    "brk": 0.5,
+    "emb": 0.625,
+    "emb2": 0.5
+   }
+  },
+  "6": {
+   "recall": 0.24,
+   "n_true": 25,
+   "n_pred": 6,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.24429080243033732,
+   "recall_by_type": {
+    "inv": 0.8333333333333334,
+    "brk": 0.4,
+    "emb": 0.4444444444444444,
+    "emb2": 0.4
+   }
+  },
+  "7": {
+   "recall": 0.35,
+   "n_true": 20,
+   "n_pred": 7,
+   "fa_per_day": 0.0,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.21374743092030143,
+   "recall_by_type": {
+    "inv": 0.5714285714285714,
+    "brk": 0.6,
+    "emb": 0.7142857142857143,
+    "emb2": 1.0
+   }
+  },
+  "8": {
+   "recall": 0.3333333333333333,
+   "n_true": 21,
+   "n_pred": 8,
+   "fa_per_day": 0.004347826086956522,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.19343148357870893,
+   "recall_by_type": {
+    "inv": 0.8333333333333334,
+    "brk": 0.8,
+    "emb": 0.5,
+    "emb2": 0.5
+   }
+  },
+  "9": {
+   "recall": 0.3,
+   "n_true": 20,
+   "n_pred": 7,
+   "fa_per_day": 0.004347826086956522,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.20352968141187255,
+   "recall_by_type": {
+    "inv": 0.6,
+    "brk": 0.5,
+    "emb": 0.375,
+    "emb2": 0.6666666666666666
+   }
+  },
+  "10": {
+   "recall": 0.3333333333333333,
+   "n_true": 18,
+   "n_pred": 7,
+   "fa_per_day": 0.004347826086956522,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.1941008563273073,
+   "recall_by_type": {
+    "inv": 0.5714285714285714,
+    "brk": 0.75,
+    "emb": 0.6666666666666666,
+    "emb2": 1.0
+   }
+  }
+ }
+}

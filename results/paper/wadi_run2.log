@@ -1,0 +1,24 @@
+WADI: (184801, 40) spp=1.0 ref=12000 test=172801 events=14
+True events: [(5103, 6604, 1501), (59053, 59644, 591), (60903, 62644, 1741), (63043, 63894, 851), (70773, 71444, 671)]
+
+--- RDSG family ---
+  RDSG channels built (246s)
+  RDSG curve: 9 pts, max recall=0.857
+  b4_if... max=0.857
+  b4_lof... max=0.000
+  b5b_pcorr... max=0.286
+  b5c_var... max=0.357
+  b2_granger...<repo>/relational.py:208: RuntimeWarning: divide by zero encountered in log
+  return max(np.log(sr / sf), 0.0)
+ max=0.357
+  b5a_mi... max=0.429
+
+==================================================
+WADI done (723s), saved <repo>/wadi_curves.json
+  rdsg         max_recall=0.857 @<=5FA/d=0.357
+  b4_if        max_recall=0.857 @<=5FA/d=0.000
+  b4_lof       max_recall=0.000 @<=5FA/d=0.000
+  b5b_pcorr    max_recall=0.286 @<=5FA/d=NOT-EVALUABLE (no grid point <=5 FA/day)
+  b5c_var      max_recall=0.357 @<=5FA/d=NOT-EVALUABLE (no grid point <=5 FA/day)
+  b2_granger   max_recall=0.357 @<=5FA/d=NOT-EVALUABLE (no grid point <=5 FA/day)
+  b5a_mi       max_recall=0.429 @<=5FA/d=NOT-EVALUABLE (no grid point <=5 FA/day)

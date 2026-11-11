@@ -1,0 +1,15 @@
+seed 1: rdsg=8 gamma=11
+seed 2: rdsg=7 gamma=9
+seed 3: rdsg=7 gamma=9
+seed 4: rdsg=8 gamma=10
+seed 5: rdsg=5 gamma=9
+seed 6: rdsg=6 gamma=8
+seed 7: rdsg=8 gamma=10
+seed 8: rdsg=10 gamma=10
+seed 9: rdsg=7 gamma=11
+seed 10: rdsg=7 gamma=7
+
+rdsg median: 7.0 [8, 7, 7, 8, 5, 6, 8, 10, 7, 7]
+gamma median: 9.5 [11, 9, 9, 10, 9, 8, 10, 10, 11, 7]
+rdsg fewer than gamma on 8/10 seeds
+CHAIN_DONE

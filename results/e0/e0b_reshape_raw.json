@@ -1,0 +1,286 @@
+{
+ "full": {
+  "1": {
+   "recall": 0.4,
+   "n_true": 10,
+   "n_pred": 11,
+   "fa_per_day": 0.56,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.1713796058269066,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "2": {
+   "recall": 0.1,
+   "n_true": 10,
+   "n_pred": 10,
+   "fa_per_day": 0.72,
+   "delay_med": 9.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.15037593984962408,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "3": {
+   "recall": 0.1,
+   "n_true": 10,
+   "n_pred": 13,
+   "fa_per_day": 0.96,
+   "delay_med": 14.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.07962840079628401,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "4": {
+   "recall": 0.0,
+   "n_true": 10,
+   "n_pred": 6,
+   "fa_per_day": 0.48,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "5": {
+   "recall": 0.2,
+   "n_true": 10,
+   "n_pred": 7,
+   "fa_per_day": 0.4,
+   "delay_med": 50.5,
+   "type_acc": 0.0,
+   "pa_f1": 0.17037387600567913,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "6": {
+   "recall": 0.0,
+   "n_true": 10,
+   "n_pred": 5,
+   "fa_per_day": 0.4,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "7": {
+   "recall": 0.2,
+   "n_true": 10,
+   "n_pred": 12,
+   "fa_per_day": 0.8,
+   "delay_med": 30.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.13241379310344825,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "8": {
+   "recall": 0.1,
+   "n_true": 10,
+   "n_pred": 8,
+   "fa_per_day": 0.56,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.11599806669888836,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "9": {
+   "recall": 0.1,
+   "n_true": 10,
+   "n_pred": 11,
+   "fa_per_day": 0.8,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.08784773060029283,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "10": {
+   "recall": 0.4,
+   "n_true": 10,
+   "n_pred": 20,
+   "fa_per_day": 1.28,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.11984021304926765,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  }
+ },
+ "gamma_delta": {
+  "1": {
+   "recall": 0.4,
+   "n_true": 10,
+   "n_pred": 11,
+   "fa_per_day": 0.56,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.1713796058269066,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "2": {
+   "recall": 0.1,
+   "n_true": 10,
+   "n_pred": 10,
+   "fa_per_day": 0.72,
+   "delay_med": 9.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.14742014742014742,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "3": {
+   "recall": 0.1,
+   "n_true": 10,
+   "n_pred": 13,
+   "fa_per_day": 0.96,
+   "delay_med": 14.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.07962840079628401,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "4": {
+   "recall": 0.0,
+   "n_true": 10,
+   "n_pred": 6,
+   "fa_per_day": 0.48,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "5": {
+   "recall": 0.2,
+   "n_true": 10,
+   "n_pred": 8,
+   "fa_per_day": 0.48,
+   "delay_med": 54.5,
+   "type_acc": 0.0,
+   "pa_f1": 0.1723312589755864,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "6": {
+   "recall": 0.0,
+   "n_true": 10,
+   "n_pred": 8,
+   "fa_per_day": 0.64,
+   "delay_med": NaN,
+   "type_acc": 0.0,
+   "pa_f1": 0.0,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "7": {
+   "recall": 0.2,
+   "n_true": 10,
+   "n_pred": 12,
+   "fa_per_day": 0.8,
+   "delay_med": 30.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.13241379310344825,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "8": {
+   "recall": 0.1,
+   "n_true": 10,
+   "n_pred": 7,
+   "fa_per_day": 0.48,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.13237727523441808,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "9": {
+   "recall": 0.1,
+   "n_true": 10,
+   "n_pred": 11,
+   "fa_per_day": 0.8,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.08784773060029283,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  },
+  "10": {
+   "recall": 0.4,
+   "n_true": 10,
+   "n_pred": 18,
+   "fa_per_day": 1.12,
+   "delay_med": 0.0,
+   "type_acc": 0.0,
+   "pa_f1": 0.130246020260492,
+   "recall_by_type": {
+    "inv": null,
+    "brk": null,
+    "emb": null
+   }
+  }
+ }
+}

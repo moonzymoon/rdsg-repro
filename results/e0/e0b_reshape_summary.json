@@ -1,0 +1,18 @@
+{
+ "summary": {
+  "full_recall": 0.16,
+  "gamma_delta_recall": 0.16,
+  "full_fa": 0.696,
+  "gd_fa": 0.704,
+  "wilcoxon_p_greater": 1.0,
+  "n_seeds": 10
+ },
+ "config": {
+  "N_EACH": 10,
+  "lengths": [
+   60,
+   120
+  ],
+  "FA_TARGET": 0.25
+ }
+}

@@ -1,0 +1,2177 @@
+{
+ "seeds": {
+  "1": {
+   "events": [
+    {
+     "idx": 5,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 6,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 0,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 7,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 11,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 20,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 10,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 6,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 22,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 16,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 2,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 12,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 1,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 23,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 4,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 9,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 17,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 13,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 18,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 8,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 14,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 19,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 15,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 3,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 21,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 7,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    }
+   ]
+  },
+  "2": {
+   "events": [
+    {
+     "idx": 20,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 9,
+      "dgamma": 2
+     }
+    },
+    {
+     "idx": 3,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 21,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 9,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 17,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 8,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 2
+     }
+    },
+    {
+     "idx": 15,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 18,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 25,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 4,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 2,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 22,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 10,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 13,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 11,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 4,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 5,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 12,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 11,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 23,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 6,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 19,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 7,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 4,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 14,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 1,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 24,
+     "truth": "emb2",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 4,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 0,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 26,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 16,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 2
+     }
+    }
+   ]
+  },
+  "3": {
+   "events": [
+    {
+     "idx": 2,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 7,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 5,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 11,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 4,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 8,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 7,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 1,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 22,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 21,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 15,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 17,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 9,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 10,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 20,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 13,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 7,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 6,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 0,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 14,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 23,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 19,
+     "truth": "brk",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 16,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 18,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 12,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 3,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    }
+   ]
+  },
+  "4": {
+   "events": [
+    {
+     "idx": 23,
+     "truth": "emb2",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 12,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 4,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 17,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 8,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 3,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 7,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 11,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 1,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 7,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 2,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 8,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 0,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 5,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 21,
+     "truth": "emb2",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 9,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 18,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 22,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 13,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 19,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 15,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 14,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 6,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 10,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 20,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 16,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    }
+   ]
+  },
+  "5": {
+   "events": [
+    {
+     "idx": 12,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 4,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 1,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 15,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 7,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 20,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 9,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 6,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 10,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 22,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 8,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 21,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 14,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 26,
+     "truth": "emb2",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 13,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 5,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 4,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 23,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 2,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 3,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 25,
+     "truth": "emb2",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 4,
+      "dgamma": 2
+     }
+    },
+    {
+     "idx": 11,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 19,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 0,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 18,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 7,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 17,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 16,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 24,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    }
+   ]
+  },
+  "6": {
+   "events": [
+    {
+     "idx": 18,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 0,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 20,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 7,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 5,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 21,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 1,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 4,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 13,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 11,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 16,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 22,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 3,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 9,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 8,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 6,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 8,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 4,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 24,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 14,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 17,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 7,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 12,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 2,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 15,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 10,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 19,
+     "truth": "brk",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 23,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    }
+   ]
+  },
+  "7": {
+   "events": [
+    {
+     "idx": 11,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 5,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 17,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 6,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 24,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 12,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 18,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 2
+     }
+    },
+    {
+     "idx": 15,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 20,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 1,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 10,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 22,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 2,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 9,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 19,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 4,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 14,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 0,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 7,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 16,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 23,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 8,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 3,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 13,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 6,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 21,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 7,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 7,
+      "dgamma": 0
+     }
+    }
+   ]
+  },
+  "8": {
+   "events": [
+    {
+     "idx": 1,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 11,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 19,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 6,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 20,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 12,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 2
+     }
+    },
+    {
+     "idx": 8,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 13,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 7,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 22,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 2,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 17,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 18,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 21,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 3,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 23,
+     "truth": "emb2",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 4,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 14,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 10,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 0,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 15,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 5,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 16,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 9,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 5
+     }
+    }
+   ]
+  },
+  "9": {
+   "events": [
+    {
+     "idx": 14,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 19,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 9,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 6,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 7,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 24,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 15,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 5,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 17,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 1,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 4,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 23,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 10,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 12,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 3,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 16,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 8,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 20,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 18,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 0,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 2,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 11,
+     "truth": "brk",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 4,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 8,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 22,
+     "truth": "inv",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 7,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 13,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 21,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    }
+   ]
+  },
+  "10": {
+   "events": [
+    {
+     "idx": 14,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 15,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 21,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 0,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 8,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 11,
+     "truth": "emb",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 6,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 8,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 26,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 10,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 3,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 20,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 4,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 17,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 4,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 16,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 25,
+     "truth": "emb2",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 2,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 6,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 13,
+     "truth": "emb",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 23,
+     "truth": "brk",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 8,
+      "dgamma": 2
+     }
+    },
+    {
+     "idx": 12,
+     "truth": "brk",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 7,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 5,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 9,
+     "truth": "inv",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 18,
+     "truth": "brk",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 24,
+     "truth": "emb2",
+     "pred": null,
+     "chan": null,
+     "counts": null
+    },
+    {
+     "idx": 5,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 1,
+     "truth": "inv",
+     "pred": "inv",
+     "chan": "R",
+     "counts": {
+      "ddelta": 3,
+      "dgamma": 0
+     }
+    },
+    {
+     "idx": 19,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 1
+     }
+    },
+    {
+     "idx": 22,
+     "truth": "emb",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 1,
+      "dgamma": 3
+     }
+    },
+    {
+     "idx": 2,
+     "truth": "brk",
+     "pred": "emb",
+     "chan": "E",
+     "counts": {
+      "ddelta": 0,
+      "dgamma": 1
+     }
+    }
+   ]
+  }
+ },
+ "matrix_truth_x_component": {
+  "brk": {
+   "ddelta": 16,
+   "E": 5
+  },
+  "emb": {
+   "ddelta": 19,
+   "E": 13
+  },
+  "inv": {
+   "ddelta": 43,
+   "E": 14
+  },
+  "emb2": {
+   "ddelta": 6,
+   "E": 1
+  }
+ }
+}

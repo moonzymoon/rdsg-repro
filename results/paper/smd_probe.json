@@ -1,0 +1,71 @@
+{
+ "machine-1-1": {
+  "n_channels": 38,
+  "n_ref": 28479,
+  "n_test": 28479,
+  "n_true_events": 5,
+  "anom_rate": 0.09459601811861372,
+  "rdsg": {
+   "recall": 0.0,
+   "fa_per_day": 0.050563573159169914
+  },
+  "gamma_only": {
+   "recall": 0.0,
+   "fa_per_day": 0.0
+  },
+  "pcorr": {
+   "recall": 1.0,
+   "fa_per_day": 1.0112714631833983
+  },
+  "lof_agg": {
+   "recall": 0.8,
+   "fa_per_day": 0.2528178657958496
+  }
+ },
+ "machine-1-2": {
+  "n_channels": 38,
+  "n_ref": 23694,
+  "n_test": 23694,
+  "n_true_events": 7,
+  "anom_rate": 0.022874989448805606,
+  "rdsg": {
+   "recall": 0.0,
+   "fa_per_day": 0.0
+  },
+  "gamma_only": {
+   "recall": 0.0,
+   "fa_per_day": 0.0
+  },
+  "pcorr": {
+   "recall": 0.14285714285714285,
+   "fa_per_day": 0.1215497594327678
+  },
+  "lof_agg": {
+   "recall": 0.0,
+   "fa_per_day": 0.0
+  }
+ },
+ "machine-2-1": {
+  "n_channels": 38,
+  "n_ref": 23693,
+  "n_test": 23694,
+  "n_true_events": 9,
+  "anom_rate": 0.049379589769561916,
+  "rdsg": {
+   "recall": 0.0,
+   "fa_per_day": 0.0
+  },
+  "gamma_only": {
+   "recall": 0.0,
+   "fa_per_day": 0.0
+  },
+  "pcorr": {
+   "recall": 0.0,
+   "fa_per_day": 0.2430995188655356
+  },
+  "lof_agg": {
+   "recall": 0.0,
+   "fa_per_day": 0.0
+  }
+ }
+}

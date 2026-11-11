@@ -1,0 +1,326 @@
+{
+ "by_config": {
+  "syn9": {
+   "A": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 105.94,
+    "p95_ms": 317.46,
+    "min_ms": 104.73,
+    "max_ms": 335.65,
+    "round_medians": [
+     105.51,
+     316.74,
+     105.84,
+     105.51,
+     316.39
+    ],
+    "round_median_min": 105.51,
+    "round_median_max": 316.74,
+    "windows_per_sec": 5.32,
+    "rss_mb_max": 29.3
+   },
+   "C": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 229.16,
+    "p95_ms": 230.46,
+    "min_ms": 75.99,
+    "max_ms": 254.62,
+    "round_medians": [
+     229.23,
+     229.79,
+     228.5,
+     228.76,
+     229.77
+    ],
+    "round_median_min": 228.5,
+    "round_median_max": 229.79,
+    "windows_per_sec": 4.39,
+    "rss_mb_max": 29.4
+   }
+  },
+  "syn32": {
+   "A": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 196.68,
+    "p95_ms": 199.63,
+    "min_ms": 195.23,
+    "max_ms": 206.17,
+    "round_medians": [
+     196.33,
+     195.93,
+     199.28,
+     197.48,
+     196.44
+    ],
+    "round_median_min": 195.93,
+    "round_median_max": 199.28,
+    "windows_per_sec": 5.07,
+    "rss_mb_max": 33.0
+   },
+   "C": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 427.39,
+    "p95_ms": 431.11,
+    "min_ms": 218.04,
+    "max_ms": 481.28,
+    "round_medians": [
+     423.96,
+     427.94,
+     427.72,
+     426.59,
+     430.55
+    ],
+    "round_median_min": 423.96,
+    "round_median_max": 430.55,
+    "windows_per_sec": 2.37,
+    "rss_mb_max": 33.1
+   }
+  },
+  "syn40": {
+   "A": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 204.8,
+    "p95_ms": 205.85,
+    "min_ms": 202.58,
+    "max_ms": 254.25,
+    "round_medians": [
+     204.56,
+     205.42,
+     203.28,
+     204.42,
+     205.23
+    ],
+    "round_median_min": 203.28,
+    "round_median_max": 205.42,
+    "windows_per_sec": 4.88,
+    "rss_mb_max": 34.2
+   },
+   "B": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 203.56,
+    "p95_ms": 611.5,
+    "min_ms": 202.34,
+    "max_ms": 618.26,
+    "round_medians": [
+     203.38,
+     203.13,
+     610.8,
+     203.04,
+     204.0
+    ],
+    "round_median_min": 203.04,
+    "round_median_max": 610.8,
+    "windows_per_sec": 3.55,
+    "rss_mb_max": 34.1
+   },
+   "C": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 442.83,
+    "p95_ms": 445.34,
+    "min_ms": 229.6,
+    "max_ms": 481.08,
+    "round_medians": [
+     442.25,
+     444.55,
+     442.54,
+     442.06,
+     443.75
+    ],
+    "round_median_min": 442.06,
+    "round_median_max": 444.55,
+    "windows_per_sec": 2.33,
+    "rss_mb_max": 34.3
+   }
+  },
+  "syn40E_lo": {
+   "A": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 57.87,
+    "p95_ms": 174.38,
+    "min_ms": 57.13,
+    "max_ms": 180.48,
+    "round_medians": [
+     57.85,
+     57.41,
+     57.68,
+     174.11,
+     57.83
+    ],
+    "round_median_min": 57.41,
+    "round_median_max": 174.11,
+    "windows_per_sec": 12.33,
+    "rss_mb_max": 34.0
+   },
+   "C": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 124.1,
+    "p95_ms": 124.88,
+    "min_ms": 41.18,
+    "max_ms": 131.06,
+    "round_medians": [
+     124.42,
+     124.33,
+     123.86,
+     124.05,
+     123.9
+    ],
+    "round_median_min": 123.86,
+    "round_median_max": 124.42,
+    "windows_per_sec": 8.2,
+    "rss_mb_max": 33.7
+   }
+  },
+  "syn40E_hi": {
+   "A": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 605.92,
+    "p95_ms": 1811.08,
+    "min_ms": 598.3,
+    "max_ms": 1859.46,
+    "round_medians": [
+     600.43,
+     605.9,
+     1809.32,
+     600.3,
+     1806.54
+    ],
+    "round_median_min": 600.3,
+    "round_median_max": 1809.32,
+    "windows_per_sec": 0.92,
+    "rss_mb_max": 35.4
+   },
+   "C": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 1306.56,
+    "p95_ms": 1316.04,
+    "min_ms": 1090.39,
+    "max_ms": 1422.32,
+    "round_medians": [
+     1307.11,
+     1304.6,
+     1308.11,
+     1314.29,
+     1303.2
+    ],
+    "round_median_min": 1303.2,
+    "round_median_max": 1314.29,
+    "windows_per_sec": 0.78,
+    "rss_mb_max": 36.0
+   }
+  },
+  "real40": {
+   "A": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 212.17,
+    "p95_ms": 213.3,
+    "min_ms": 210.51,
+    "max_ms": 216.06,
+    "round_medians": [
+     212.8,
+     211.24,
+     212.56,
+     211.35,
+     212.84
+    ],
+    "round_median_min": 211.24,
+    "round_median_max": 212.84,
+    "windows_per_sec": 4.71,
+    "rss_mb_max": 34.3
+   },
+   "B": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 212.76,
+    "p95_ms": 638.56,
+    "min_ms": 209.98,
+    "max_ms": 688.73,
+    "round_medians": [
+     636.82,
+     211.27,
+     212.73,
+     636.88,
+     210.8
+    ],
+    "round_median_min": 210.8,
+    "round_median_max": 636.88,
+    "windows_per_sec": 2.65,
+    "rss_mb_max": 34.2
+   },
+   "C": {
+    "rounds": 5,
+    "n_windows": 2500,
+    "median_ms": 459.0,
+    "p95_ms": 460.75,
+    "min_ms": 243.93,
+    "max_ms": 498.94,
+    "round_medians": [
+     459.08,
+     458.68,
+     455.26,
+     459.63,
+     459.62
+    ],
+    "round_median_min": 455.26,
+    "round_median_max": 459.63,
+    "windows_per_sec": 2.23,
+    "rss_mb_max": 34.4
+   }
+  }
+ },
+ "headline": {
+  "syn9": {
+   "c_median_ms": 229.16,
+   "c_p95_ms": 230.46,
+   "wps_c": 4.39,
+   "arrival_interval_s": 32.0,
+   "ratio_A_vs_C": 0.46
+  },
+  "syn32": {
+   "c_median_ms": 427.39,
+   "c_p95_ms": 431.11,
+   "wps_c": 2.37,
+   "arrival_interval_s": 0.1,
+   "ratio_A_vs_C": 0.46
+  },
+  "syn40": {
+   "c_median_ms": 442.83,
+   "c_p95_ms": 445.34,
+   "wps_c": 2.33,
+   "arrival_interval_s": 0.1,
+   "ratio_A_vs_C": 0.46
+  },
+  "syn40E_lo": {
+   "c_median_ms": 124.1,
+   "c_p95_ms": 124.88,
+   "wps_c": 8.2,
+   "arrival_interval_s": 0.1,
+   "ratio_A_vs_C": 0.47
+  },
+  "syn40E_hi": {
+   "c_median_ms": 1306.56,
+   "c_p95_ms": 1316.04,
+   "wps_c": 0.78,
+   "arrival_interval_s": 0.1,
+   "ratio_A_vs_C": 0.46
+  },
+  "real40": {
+   "c_median_ms": 459.0,
+   "c_p95_ms": 460.75,
+   "wps_c": 2.23,
+   "arrival_interval_s": 0.1,
+   "ratio_A_vs_C": 0.46
+  }
+ }
+}
